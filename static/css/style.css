@@ -148,8 +148,10 @@ hr {
     height: 2px;
     background-color: var(--blue-theme);
 }
+li a {
+    color: var(--black-theme) !important;
+}
 /* || Landing Page CSS Grid Specific */
-
 .parent1 {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -217,6 +219,11 @@ hr {
 }
 .shop-link-text{
     font-size: var(--step-5);
+    color: var(--main-theme-colour);
+}
+span.shop-link-text:hover {
+    transition: 0.5s;
+    color: var(--red-theme);
 }
 .shop-link-arrow {
     font-size: var(--step-6);
@@ -227,7 +234,7 @@ hr {
 /* || Site Wide CSS */
 .blockquote {
     background-color: var(--black-theme);
-    color: var(--main-theme-colour);
+    color: var(--yellow-theme);
     margin-bottom: 0;
 }
 .tao-statement {
