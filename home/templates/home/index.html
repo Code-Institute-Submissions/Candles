@@ -1,19 +1,20 @@
 {% extends 'home/base.html' %}
 
-{% block content %}
+{% load static %}
 
-    <main class="container-landing parent">
+{% block content %}
+    <main class="container-landing parent1">
         <div class="row">
-            <div class="logo-container div1">
-                <img class="logo p-4" src="{{ STATIC_URL }} static/images/0&X-logo-v4.svg" alt="Company logo of 0&X." width="300%"/>
+            <div class="logo-container grid1">
+                <img class="logo p-4" src="{% static 'images/0&X-logo-v4.svg' %}" alt="Company logo of 0&X." width="300%"/>
             </div>
         </div>
-        <div class="company-mission p-3 mb-5 div3">
+        <div class="company-mission p-3 mb-5 grid2">
             <h5>Bespoke hand-made concept candles.</h5>
             <br>
             <h6>Discovering beauty within opposites.</h6>
         </div>
-        <div class="menu-container div4">
+        <div class="menu-container grid3">
             <ul class="py-3 pl-1 pr-5 mr-5">
                 <li><a href={#}>Home</a></li>
                 <li><a href={#}>Shop</a></li>
@@ -29,7 +30,7 @@
         </div>
     </div>
     <section class="parent2">
-        <div class="grid5">
+        <div class="grid4">
             <h3 class="pt-5 pl-5">At 0&X.</h3><hr>
             <p class="px-5">We believe there is beauty within the simplicity of the eternally used candle. For many, it provides retreat, serenity, a time to gather and collect your conscious thoughts, a time to relax and switch off. <br><br>
             Considered thought and effort is immersed every candle release. Each release combines two candles. Individually perfect, yet offering the owner a unique chance to conceptually discover the perfection that is within the concept of 'opposite-principles'. The reason for this being the knowledge that without one, you cannot know the other. Without night, you cannot know day.
@@ -38,13 +39,12 @@
             The essence of each candle is designed to encourage and attract thoughful comtemplation, self-discovery as well as harvesting the natural effects our candles provide.
             </p>
         </div>
-        <div class="grid6">
+        <div class="grid5">
             <img class="candle1" src="https://res.cloudinary.com/peggy-co/image/upload/e_art:quartz,q_auto:best/v1588252082/Candles/photo2_copy_gqls2n.jpg" alt="Image of someone holding a cangle in their palms offering it to the viewer" />
         </div>
     </section>
     <div class="blockquote text-right">
-        <a href={#}><span class="shop-link-text">Shop</span><span class="shop-link-arrow">>.</span></a>
+        <span class="shop-link-text"><a href="#">Shop</a></span><span class="shop-link-arrow">>.</span>
     </div>
-
 {% endblock %}
     

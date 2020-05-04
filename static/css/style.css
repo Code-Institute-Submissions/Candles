@@ -149,7 +149,7 @@ hr {
     background-color: var(--blue-theme);
 }
 li a {
-    color: var(--black-theme) !important;
+    color: var(--main-theme-colour) !important;
 }
 /* || Landing Page CSS Grid Specific */
 .parent1 {
@@ -161,8 +161,8 @@ li a {
     }
     
 .grid1 { grid-area: 1 / 1 / 3 / 3; }
-.grid3 { grid-area: 4 / 1 / 6 / 4; }
-.grid4 { grid-area: 4 / 4 / 6 / 6; }
+.grid2 { grid-area: 4 / 1 / 6 / 4; }
+.grid3 { grid-area: 4 / 4 / 6 / 6; }
 
 .parent2 {
     display: grid;
@@ -172,8 +172,23 @@ li a {
     grid-row-gap: 0px;
     }
     
-.grid5 { grid-area: 1 / 1 / 6 / 3; }
-.grid6 { grid-area: 1 / 3 / 6 / 6; }
+.grid4 { grid-area: 1 / 1 / 6 / 3; }
+.grid5 { grid-area: 1 / 3 / 6 / 6; }
+
+.parent3 {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    }
+    
+    .grid6 { grid-area: 1 / 1 / 2 / 4; }
+    .grid7 { grid-area: 2 / 1 / 4 / 4; }
+    .grid8 { grid-area: 4 / 1 / 7 / 4; }
+    .grid9 { grid-area: 1 / 4 / 2 / 7; }
+    .grid10 { grid-area: 2 / 4 / 4 / 7; }
+    .grid11 { grid-area: 4 / 4 / 7 / 7; }
 /* || Specific Typography */
 
 
@@ -217,18 +232,33 @@ li a {
     bottom: 0;
     right: 0;
 }
+.menu-shop {
+    background-color: var(--blue-theme);
+    color: var(--main-theme-colour);
+    position:absolute;
+    bottom: 0;
+    right: 0;
+}
 .shop-link-text{
     font-size: var(--step-5);
     color: var(--main-theme-colour);
+    text-decoration: none;
 }
-span.shop-link-text:hover {
+a {
+    color: var(--main-theme-colour);
+    text-decoration: none;
+}
+a:hover,
+a:focus {
     transition: 0.5s;
     color: var(--red-theme);
+    text-decoration: none;
 }
 .shop-link-arrow {
     font-size: var(--step-6);
     color: var(--yellow-theme);
     padding-right: 40px;
+    text-decoration: none;
 }
 
 /* || Site Wide CSS */
