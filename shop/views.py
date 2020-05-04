@@ -4,4 +4,10 @@ from products.models import *
 
 def displayShop(request):
     products = Product.objects.all()
-    return render(request, 'shop/store.html', {'products':products})
+    context = {'products':products}
+    return render(request, 'shop/store.html', context)
+
+def displayProduct(request, pk):
+    product = Product.objects.get(id=pk)
+    context = {'product':product}
+    return render(request, 'shop/displayProduct.html', context)

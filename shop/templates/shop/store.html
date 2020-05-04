@@ -6,7 +6,7 @@
     <main class="container-landing parent">
         <div class="row">
             <div class="logo-container div1">
-                <img class="logo p-4" src="{% static 'images/0&X-logo-v4.svg' %}" alt="Company logo of 0&X." width="300%"/>
+                <img class="logo p-4" src="{% static 'images/0&X-logo-v4.svg' %}" alt="Company logo of 0&X." width="400%"/>
             </div>
         </div>
         <div class="company-mission p-3 mb-5 div3">
@@ -16,34 +16,28 @@
         </div>
         <div class="menu-shop div4">
             <ul class="py-3 pl-1 pr-5 mr-5">
-                <li><a href={#}>Home</a></li>
-                <li><a href={#}>Shop</a></li>
+                <li><a href={% url 'index' %}>Home</a></li>
+                <li><a href={% url 'displayShop' %}>Shop</a></li>
                 <li><a href={#}>About & Contact</a></li>
                 <li><a href={#}>Login</a></li>
             </ul>
         </div>
     </main>
     
-    <div class="container-fluid">
+    <div class="container store-bground">
         <div class="row">
             {% for product in products %}
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-md-6 store-bground">
                     <div class="card">
                         <img src="{{MEDIA_URL}}{{product.image}}" class="card-img-top" alt="image of candles label">
-                        <div class="card-body">
+                        <div class="card-body store-bground">
                             <h4 class="card-title">{{product.name}}</h4>
                             <p class="card-text">{{product.description}}</p>
                         </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">{{product.top_note_1}}</li>
-                            <li class="list-group-item">{{product.top_note_2}}</li>
-                            <li class="list-group-item">{{product.heart_note_1}}</li>
-                            <li class="list-group-item">{{product.base_note_1}}</li>
-                        </ul>
                         <div class="card-body">
                             <h5 class="card-title">£{{product.price}}</h5>
                             <button> 
-                                <a href="#" class="card-link">Discover more...</a>
+                                <a href="{% url 'displayProduct' product.id %}" class="card-link">Discover more...</a>
                             </button>
                             <button>
                                 <a href="#" class="card-link">Quick Buy</a>
@@ -54,6 +48,11 @@
             {% endfor %}
         </div>
     </div>
+    <!--Candle made features -->
 
-    <!--Candle made features-->
+
+
+    <div class="blockquote text-left">
+        <span class="shop-link-arrow">.<</span><span class="shop-link-text"><a href="{% url 'index' %}">Home</a></span>
+    </div>
 {% endblock %}

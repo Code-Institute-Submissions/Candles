@@ -1,0 +1,45 @@
+{% extends 'shop/base.html' %}
+
+{% load static %}
+
+{% block content %}
+    
+    <main class="container-landing parent">
+        <div class="row">
+            <div class="col-12 div1">
+                <img class="p-4" src="{% static 'images/0&X-logo-v4.svg' %}" alt="Company logo of 0&X." width="50%"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <img src="{{MEDIA_URL}}{{product.image}}" alt="Image of candle" width="100%"/>
+            </div>
+            <div class="col-12 col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">{{product.name}}</h4>
+                            <p class="card-text">{{product.description}}</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">{{product.top_note_1}}</li>
+                            <li class="list-group-item">{{product.top_note_2}}</li>
+                            <li class="list-group-item">{{product.heart_note_1}}</li>
+                            <li class="list-group-item">{{product.base_note_1}}</li>
+                        </ul>
+                        <div class="card-body">
+                            <h5 class="card-title">£{{product.price}}</h5>
+                            <button>
+                                <a href="#" class="card-link">Quick Buy</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="blockquote text-left">
+            <span class="shop-link-arrow">.<</span><span class="shop-link-text"><a href="{% url 'index' %}">Home</a></span>
+        </div>
+    </main>
+  
+{% endblock %}
+

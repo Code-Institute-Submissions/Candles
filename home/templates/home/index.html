@@ -6,18 +6,18 @@
     <main class="container-landing parent1">
         <div class="row">
             <div class="logo-container grid1">
-                <img class="logo p-4" src="{% static 'images/0&X-logo-v4.svg' %}" alt="Company logo of 0&X." width="300%"/>
+                <img class="logo p-4" src="{% static 'images/0&X-logo-v4.svg' %}" alt="Company logo of 0&X." width="400%"/>
             </div>
         </div>
         <div class="company-mission p-3 mb-5 grid2">
-            <h5>Bespoke hand-made concept candles.</h5>
+            <h4>Bespoke hand-made concept candles.</h4>
             <br>
-            <h6>Discovering beauty within opposites.</h6>
+            <h6>'Discovering beauty within opposites.'</h6>
         </div>
         <div class="menu-container grid3">
             <ul class="py-3 pl-1 pr-5 mr-5">
-                <li><a href={#}>Home</a></li>
-                <li><a href={#}>Shop</a></li>
+                <li><a href={% url 'index' %}>Home</a></li>
+                <li><a href={% url 'displayShop' %}>Shop</a></li>
                 <li><a href={#}>About & Contact</a></li>
                 <li><a href={#}>Login</a></li>
             </ul>
@@ -25,7 +25,7 @@
     </main>
     <div class="blockquote text-right">
         <div class="col-12 col-lg-8 mx-auto">
-            <p class="mx-5 px-5 pt-1">"Yin and yang, male and female, strong and weak, rigid and tender, heaven and earth, light and darkness, thunder and lightning, cold and warmth, good and evil...the interplay of opposite principles constitutes the universe."</p>
+            <p class="mx-5 px-5 pt-1 text-left">"Yin and yang, male and female, strong and weak, rigid and tender, heaven and earth, light and darkness, thunder and lightning, cold and warmth, good and evil...the interplay of opposite principles constitutes the universe."</p>
             <footer class="blockquote-footer mx-5 mt-5 px-5 pt-5">Confucius</footer>
         </div>
     </div>
@@ -44,7 +44,7 @@
         </div>
     </section>
     <div class="blockquote text-right">
-        <span class="shop-link-text"><a href="#">Shop</a></span><span class="shop-link-arrow">>.</span>
+        <span class="shop-link-text"><a href="{% url 'displayShop' %}">Shop</a></span><span class="shop-link-arrow">>.</span>
     </div>
 {% endblock %}
     

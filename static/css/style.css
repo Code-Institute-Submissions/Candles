@@ -260,7 +260,11 @@ a:focus {
     padding-right: 40px;
     text-decoration: none;
 }
+/* Shop Page specific css */
 
+.store-bground {
+    background-color: var(--black-theme);
+}
 /* || Site Wide CSS */
 .blockquote {
     background-color: var(--black-theme);
@@ -273,6 +277,18 @@ a:focus {
 ul {
     list-style: none;
     font-size: var(--step-1);
+}
+a:hover,
+a:focus {
+    transition: 0.5s;
+    color: var(--red-theme);
+    text-decoration: none;
+}
+.shop-link-arrow {
+    font-size: var(--step-6);
+    color: var(--yellow-theme);
+    padding-right: 40px;
+    text-decoration: none;
 }
 
 /* Media Queries */
