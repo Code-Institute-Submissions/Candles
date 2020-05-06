@@ -115,19 +115,17 @@
 body,html{
     background-color:var(--main-theme-colour);
     color:var(--second-colour);
-    font-family:var(--font-Regular);
+    font-family:var(--font-Light);
     margin:0;
     padding:0;
     width:100vw;
     height:100vh;
     overflow-x:hidden
 }
-  
 html{
     -webkit-text-size-adjust:100%;
     -webkit-tap-highlight-color:transparent
 }
-  
 footer,header,main,nav,section{display:block}
 
 h1,h2,h3,h4,h5,h6{
@@ -142,7 +140,7 @@ h5{font-size:var(--step-2)}
 h6{font-size:var(--step-1)}
 
 p, ul, ol, nav {
-    font-size:var(--step-0);
+    font-size:var(--step--1);
 }
 hr {
     height: 2px;
@@ -198,7 +196,6 @@ li a {
     object-fit: fill;
     margin: 0;
 }
-
 .colour-text-block {
     font-size: var(--step-1); 
     background-color: var(--yellow-theme);
@@ -261,15 +258,23 @@ a:focus {
     text-decoration: none;
 }
 /* Shop Page specific css */
-
+.product-display{
+    background-color: var(--black-theme);
+}
 .store-bground {
     background-color: var(--black-theme);
+}
+.shop-link-text-2{
+    font-size: var(--step-3);
 }
 /* || Site Wide CSS */
 .blockquote {
     background-color: var(--black-theme);
     color: var(--yellow-theme);
     margin-bottom: 0;
+}
+.card {
+    border: none;
 }
 .tao-statement {
     font-size: var(--step-1);

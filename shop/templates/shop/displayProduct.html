@@ -4,9 +4,9 @@
 
 {% block content %}
     
-    <main class="container-landing parent">
+    <main class="container-landing">
         <div class="row">
-            <div class="col-12 div1">
+            <div class="col-12">
                 <img class="p-4" src="{% static 'images/0&X-logo-v4.svg' %}" alt="Company logo of 0&X." width="50%"/>
             </div>
         </div>
@@ -37,7 +37,7 @@
             </div>
         </div>
         <div class="blockquote text-left">
-            <span class="shop-link-arrow">.<</span><span class="shop-link-text"><a href="{% url 'index' %}">Home</a></span>
+            <span class="shop-link-arrow">.<</span><span class="shop-link-text"><a href="{% url 'displayShop' %}">Shop</a></span>
         </div>
     </main>
   

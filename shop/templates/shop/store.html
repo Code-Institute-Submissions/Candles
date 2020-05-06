@@ -3,18 +3,18 @@
 {% load static %}
 
 {% block content %}
-    <main class="container-landing parent">
+    <main class="container-landing">
         <div class="row">
-            <div class="logo-container div1">
+            <div class="logo-container">
                 <img class="logo p-4" src="{% static 'images/0&X-logo-v4.svg' %}" alt="Company logo of 0&X." width="400%"/>
             </div>
         </div>
-        <div class="company-mission p-3 mb-5 div3">
+        <div class="company-mission p-3 mb-5">
             <h5>Shop and discover our exclusive range of</h5>
             <br>
             <h5>bespoke hand-made aromatherapy candles.</h5>
         </div>
-        <div class="menu-shop div4">
+        <div class="menu-shop">
             <ul class="py-3 pl-1 pr-5 mr-5">
                 <li><a href={% url 'index' %}>Home</a></li>
                 <li><a href={% url 'displayShop' %}>Shop</a></li>
@@ -23,24 +23,29 @@
             </ul>
         </div>
     </main>
-    
-    <div class="container store-bground">
+    <div class="blockquote text-right">
+        <div class="col-12">
+            <h6 class="mx-5 px-5 pt-5 text-left">"Discover our range of carefully and lovingly crafted Soy-Wax candles. Embellished with rich aromatherpy essential oils, expand in it's treasured essence. Each candle is created using the concept of opposites. Without each other, we cannot know either. We celebrate this simple yet highly evolved and powerful statetment. Individually perfect or together we view your custom as an investment into yourself. This is why we pour as much love and light into each creation as we can. This is our celebration of your personal investment."</h6>
+            <footer class="blockquote-footer mx-5 mt-5 px-5 pt-5">0&X.</footer>
+        </div>
+    </div>
+    <div class="container-fluid product-display m-0">
         <div class="row">
             {% for product in products %}
-                <div class="col-12 col-md-6 store-bground">
-                    <div class="card">
+                <div class="col-12 col-md-6">
+                    <div class="card m-2 p-2">
                         <img src="{{MEDIA_URL}}{{product.image}}" class="card-img-top" alt="image of candles label">
-                        <div class="card-body store-bground">
+                        <div class="card-body">
                             <h4 class="card-title">{{product.name}}</h4>
                             <p class="card-text">{{product.description}}</p>
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">£{{product.price}}</h5>
-                            <button> 
+                            <button class="btn btn-lg btn-dark"> 
                                 <a href="{% url 'displayProduct' product.id %}" class="card-link">Discover more...</a>
                             </button>
-                            <button>
-                                <a href="#" class="card-link">Quick Buy</a>
+                            <button class="btn btn-lg btn-dark">
+                                <a href="#" class="card-link">Add to cart</a>
                             </button>
                         </div>
                     </div>
@@ -49,10 +54,12 @@
         </div>
     </div>
     <!--Candle made features -->
-
-
-
-    <div class="blockquote text-left">
-        <span class="shop-link-arrow">.<</span><span class="shop-link-text"><a href="{% url 'index' %}">Home</a></span>
+    <div class="blockquote align-middle clearfix">
+        <span class="float-left">
+            <span class="shop-link-arrow">.<</span><span class="shop-link-text-2"><a href="{% url 'index' %}">Home</a></span>
+        </span>
+        <span class="float-right">
+            <span class="shop-link-text-2"><a href="{% url 'displayShop' %}">About&Contact </a></span><span class="shop-link-arrow">>.</span>
+        </span>
     </div>
 {% endblock %}
