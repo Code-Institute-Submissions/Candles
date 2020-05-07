@@ -3,23 +3,21 @@
 {% load static %}
 
 {% block content %}
-    <main class="container-landing">
-        <div class="row">
-            <div class="logo-container">
-                <img class="logo p-4" src="{% static 'images/0&X-logo-v4.svg' %}" alt="Company logo of 0&X." width="400%"/>
-            </div>
+    <main class="container-landing parent1">
+        <div class="logo-container grid1">
+            <img class="logo p-4" src="{% static 'images/0&X-logo-v4.svg' %}" alt="Company logo of 0&X." width="300%"/>
         </div>
-        <div class="company-mission p-3 mb-5">
-            <h5>Shop and discover our exclusive range of</h5>
+        <div class="company-mission p-3 mb-5 grid2">
+            <h6>Shop and discover our exclusive range of</h6>
             <br>
-            <h5>bespoke hand-made aromatherapy candles.</h5>
+            <h6>bespoke hand-made aromatherapy candles.</h6>
         </div>
-        <div class="menu-shop">
+        <div class="menu-shop grid3">
             <ul class="py-3 pl-1 pr-5 mr-5">
                 <li><a href={% url 'index' %}>Home</a></li>
                 <li><a href={% url 'displayShop' %}>Shop</a></li>
                 <li><a href={#}>About & Contact</a></li>
-                <li><a href={#}>Login</a></li>
+                <li><a href={#}>Member Login</a></li>
             </ul>
         </div>
     </main>
@@ -32,7 +30,7 @@
     <div class="container-fluid product-display m-0">
         <div class="row">
             {% for product in products %}
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-md-4 offset-md-1">
                     <div class="card m-2 p-2">
                         <img src="{{MEDIA_URL}}{{product.image}}" class="card-img-top" alt="image of candles label">
                         <div class="card-body">
@@ -41,12 +39,16 @@
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">£{{product.price}}</h5>
-                            <button class="btn btn-lg btn-dark"> 
-                                <a href="{% url 'displayProduct' product.id %}" class="card-link">Discover more...</a>
-                            </button>
-                            <button class="btn btn-lg btn-dark">
-                                <a href="#" class="card-link">Add to cart</a>
-                            </button>
+                            <a href="{% url 'displayProduct' product.id %}" class="card-link">
+                                <button class="btn btn-lg btn-outline-dark"> 
+                                    <p class="m-0">Discover more...</p>
+                                </button>
+                            </a>
+                            <a href="#" class="card-link">
+                                <button class="btn btn-lg btn-outline-dark">
+                                    <p class="m-0">Add to cart</p>
+                                </button>
+                            </a>
                         </div>
                     </div>
                 </div>

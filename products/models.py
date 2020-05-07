@@ -9,6 +9,6 @@ class Product(models.Model):
     top_note_2 = models.CharField(max_length=254, default='')
     heart_note_1 = models.CharField(max_length=254, default='')
     base_note_1 = models.CharField(max_length=254, default='')
-
+    
     def __str__(self):
         return self.name
