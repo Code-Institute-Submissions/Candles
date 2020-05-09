@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}0&X. | Members Area{% endblock %}
+
+{% block content %}
+    <main class="container-landing parent1">
+        <div class="logo-container grid1">
+            <img class="logo p-4" src="{% static 'images/0&X-logo-v4.svg' %}" alt="Company logo of 0&X." width="200%"/>
+        </div>
+        <div class="p-3 m-5 grid2B">
+            <h5>Member Login</h5>
+            <form method="POST" action="{% url 'login' %}">
+                {% csrf_token %}
+                {{ form }}
+                <input type="submit" value="Login">
+            </form>
+        </div>
+        <div class="menu-container grid3">
+            <ul class="py-3 pl-1 pr-5 mr-5">
+                <li><a href={% url 'index' %}>Home</a></li>
+                <li><a href={% url 'displayShop' %}>Shop</a></li>
+                 <li><a href={% url 'signupPage' %}>Member Registration</a></li>
+                <li><a href={% url 'login' %}>Member Login</a></li>
+            </ul>
+        </div>
+    </main>
+
+{% endblock %}

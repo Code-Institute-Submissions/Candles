@@ -19,10 +19,12 @@ from django.urls import include, path
 from django.conf.urls.static import serve, static
 from django.conf import settings
 
+
 urlpatterns = [
     path('', include('home.urls')),
     path('home/', include('home.urls')),
     path('shop/', include('shop.urls')),
+    path('accounts/', include('accounts.urls')),
     path('admin/', admin.site.urls),
 ] 
 if settings.DEBUG:

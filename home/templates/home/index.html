@@ -1,4 +1,4 @@
-{% extends 'home/base.html' %}
+{% extends 'base.html' %}
 
 {% load static %}
 
@@ -17,7 +17,7 @@
                 <li><a href={% url 'index' %}>Home</a></li>
                 <li><a href={% url 'displayShop' %}>Shop</a></li>
                 <li><a href={#}>About & Contact</a></li>
-                <li><a href={#}>Member Login</a></li>
+                <li><a href={% url 'membersArea' %}>Member Login</a></li>
             </ul>
         </div>
     </main>
