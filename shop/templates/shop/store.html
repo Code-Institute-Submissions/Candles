@@ -1,30 +1,14 @@
 {% extends 'base.html' %}
 
+{% block title %}0&X. | Shope{% endblock %}
+
 {% load static %}
 
 {% block content %}
-    <main class="container-landing parent1">
-        <div class="logo-container grid1">
-            <img class="logo p-4" src="{% static 'images/0&X-logo-v4.svg' %}" alt="Company logo of 0&X." width="300%"/>
-        </div>
-        <div class="company-mission p-3 mb-5 grid2">
-            <h6>Shop and discover our exclusive range of</h6>
-            <br>
-            <h6>bespoke hand-made aromatherapy candles.</h6>
-        </div>
-        <div class="menu-shop grid3">
-            <ul class="py-3 pl-1 pr-5 mr-5">
-                <li><a href={% url 'index' %}>Home</a></li>
-                <li><a href={% url 'displayShop' %}>Shop</a></li>
-                <li><a href={#}>About & Contact</a></li>
-                <li><a href={% url 'login' %}>Member Login</a></li>
-            </ul>
-        </div>
-    </main>
     <div class="blockquote text-right">
         <div class="col-12">
-            <h6 class="mx-5 px-5 pt-5 text-left">"Discover our range of carefully and lovingly crafted Soy-Wax candles. Embellished with rich aromatherpy essential oils, expand in it's treasured essence. Each candle is created using the concept of opposites. Without each other, we cannot know either. We celebrate this simple yet highly evolved and powerful statetment. Individually perfect or together we view your custom as an investment into yourself. This is why we pour as much love and light into each creation as we can. This is our celebration of your personal investment."</h6>
-            <footer class="blockquote-footer mx-5 mt-5 px-5 pt-5">0&X.</footer>
+            <h6 class="mx-5 px-5 pt-5 text-left">"Discover our range of carefully and lovingly crafted Soy-Wax candles. Embellished with rich aromatherpy essential oils, expand in it's treasured essence. Each candle is created using the concept of opposites. Without each other, we cannot know either. We celebrate this simple yet highly evolved and powerful statetment. Individually perfect or together we view your custom as an investment into yourself. This is why we pour as much love and light into each creation as we can. This is great celebration in your personal investment."</h6>
+            <footer class="blockquote-footer mx-5 mt-5 px-5 pt-5">0&X. - A statement of our heart.</footer>
         </div>
     </div>
     <div class="container-fluid product-display m-0">

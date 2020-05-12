@@ -8,11 +8,31 @@
     <title>{% block title %}{% endblock %}</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
-
 </head>
 <body>
+    <main class="container-landing parent1">
+        <div class="logo-container grid1">
+            <img class="logo p-4" src="{% static 'images/0&X-logo-v4.svg' %}" alt="Company logo of 0&X." width="300%"/>
+        </div>
+        <div class="company-mission p-3 mb-5 grid2">
+            <h4>Bespoke hand-made concept candles.</h4>
+            <br>
+            <h6>'Discovering beauty within opposites.'</h6>
+        </div>
+        <div class="menu-container grid3">
+            <ul class="py-3 pl-3 pr-5 mr-5">
+                <li><a href={% url 'index' %}>Home</a></li>
+                <li><a href={% url 'displayShop' %}>Shop</a></li>
+                <li><a href={#}>About & Contact</a></li>
+                <li><a href={% url 'login' %}>Members Area</a></li>
+                {% if user.is_authenticated %}
+                    <li><a href={% url 'logout' %}>Logout</a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </main>
     {% block content %}
-
+       
     {% endblock %}
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
