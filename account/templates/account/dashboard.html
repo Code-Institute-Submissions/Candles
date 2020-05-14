@@ -3,6 +3,32 @@
 {% block title %}0&X. | Profile dashboard{% endblock %}
 
 {% block content %}
+<section class="m-4 p-3">
     <h4>Dashboard</h4>
     <h6>Welcome {{request.user.first_name}} to your dashboard.</h6>
+    <hr>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                    <h5 class="card-title">Recent Orders and Reviews</h5>
+                    <p class="card-text">Take a look at your current orders and previous ones. Share your views.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                    <h5 class="card-title">Member-Only Concept Candles</h5>
+                    <p class="card-text">Bespoke and unique 'Member-Only' Candle creations.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    
 {% endblock %}

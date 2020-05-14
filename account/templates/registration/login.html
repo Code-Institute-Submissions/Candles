@@ -3,11 +3,12 @@
 {% block title%}0&X. | Login{% endblock %}
 
 {% block content %}
+<section class="m-4 p-3">
     <h4>Member Login</h4>
     {% if form.errors %}
         <h6>Your username and password didn't match. Please try again.</h6>
     {% else %}
-        <h6>Please use the following form to log into your personal account.</h6>
+        <h6>Sign in and discover your member benefits!</h6>
     {% endif %}
     <div class="login-form">
         <form action="{% url 'login' %}" method='POST'>
@@ -17,5 +18,5 @@
             <h6><input type="submit" value="Login"></h6>
         </form>
     </div>
-
+</section>
 {% endblock %}
