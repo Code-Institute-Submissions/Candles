@@ -137,10 +137,4 @@ LOGIN_REDIRECT_URL = 'dashboard'
 LOGIN_URL = 'login'
 LOGOUT_URL = 'logout'
 
-"""
-EMAIL_HOST: 'smtp-relay.gmail.com'
-EMAIL_PORT: 587
-EMAIL_HOST_USER: 'peggy@webfoundry.org'
-EMAIL_HOST_PASSWORD: 'Gizmo1974!'
-EMAIL_USE_TLS: True
-"""
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
