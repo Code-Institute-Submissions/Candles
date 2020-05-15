@@ -10,13 +10,11 @@
     {% else %}
         <h6>Sign in and discover your member benefits!</h6>
     {% endif %}
-    <div class="login-form">
-        <form action="{% url 'login' %}" method='POST'>
-            {{ form.as_p }}
-            {% csrf_token %}
-            <input type="hidden" name="next" value="{{ next }}" />
-            <h6><input type="submit" value="Login"></h6>
-        </form>
-    </div>
+    <form action="{% url 'login' %}" method='POST'>
+        {{ form.as_p }}
+        {% csrf_token %}
+        <input type="hidden" name="next" value="{{ next }}" />
+        <h6><input type="submit" value="Login"></h6>
+    </form>
 </section>
 {% endblock %}
