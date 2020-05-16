@@ -12,7 +12,7 @@
 <body>
     <main class="container-landing parent2">
         <div class="logo-container grid5">
-            <img class="img-fluid" src="{% static 'images/logo.min.jpg' %}" alt="Company logo of 0&X." />
+            <img class="img-fluid p-3" src="{% static 'images/logo.min.jpg' %}" alt="Company logo of 0&X." />
         </div>
         <div class="grid5B">
             {% block content %}
@@ -24,7 +24,7 @@
                 <li><a href={% url 'index' %}>Home</a></li>
                 <li><a href={% url 'displayShop' %}>Shop</a></li>
                 {% if not request.user.is_authenticated %}
-                    <li><a href={#}>Member Registration</a></li>
+                    <li><a href={% url 'register' %}>Member Registration</a></li>
                     <li><a href={% url 'login' %}>Member Login</a></li>
                 {% endif %}
                 {% if request.user.is_authenticated %}

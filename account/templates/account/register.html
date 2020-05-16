@@ -1,0 +1,16 @@
+{% extends 'account/base.html' %}
+
+{% block title%}0&X. | Member Registration{% endblock %}
+
+{% block content %}
+<section class="m-4 p-3">
+    <h4>Member Registration</h4>
+    <h6>We're so glad you've decided to join us!</h6>
+    <h6>Please fill in your details below</h6>
+    <form method='POST'>
+        {{ user_form.as_p }}
+        {% csrf_token %}
+        <h6><input type="submit" value="Create my new account!"></h6>
+    </form>
+</section>
+{% endblock %}
