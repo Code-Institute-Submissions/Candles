@@ -2,7 +2,8 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
-from .forms import LoginForm, UserRegistrationForm
+from .forms import LoginForm, UserRegistrationForm, EditUserForm, EditProfileForm
+from .models import Profile
 
 def memberAreaDisplay(request):
     context = {'menu_class': 'menu-login'}
@@ -46,9 +47,26 @@ def register(request):
                 user_form.cleaned_data['password1']
             )
             new_user.save()
+            Profile.objects.create(user=new_user)
             context = {'new_user':new_user}
             return render(request, 'account/register_done.html', context)
     else:
         user_form = UserRegistrationForm()
         context = {'user_form':user_form}
     return render(request, 'account/register.html', context)
+
+@login_required
+def editProfile(request):
+    if request.method == 'POST':
+        user_form = EditUserForm(instance=request.user, data=request.POST)
+        profile_form = EditProfileForm(instance=request.user.profile, data=request.POST)
+
+        if user_form.is_valid() and profile_form.is_valid():
+            user_form.save()
+            profile_form.save()
+    else:
+        user_form = EditUserForm(instance=request.user)
+        profile_form = EditProfileForm(instance=request.user.profile)
+
+    context = {'user_form':user_form, 'profile_form': profile_form}
+    return render(request, 'account/editProfile.html', context)
