@@ -176,7 +176,7 @@ img {
     }
     
     .grid5 { grid-area: 1 / 1 / 3 / 4; }
-    .grid5B { grid-area: 3 / 1 / 7 / 5; }
+    .grid5B { grid-area: 3 / 1 / 7 / 4; }
     .grid5C { grid-area: 5 / 5/ 7 / 7; } 
 
 .parent3{
@@ -251,6 +251,9 @@ a:focus {
     padding-right: 40px;
     text-decoration: none;
 }
+.svg {
+    width: 80px;
+}
 /* Shop Page specific css */
 .menu-shop {
     background-color: var(--blue-theme);
@@ -273,6 +276,12 @@ a:focus {
     color: var(--main-theme-colour);
     width: 100%;
     height: 100%;
+}
+
+/* Cart specific css */
+.cart-heading {
+    position: relative;;
+    top: 0;
 }
 /* || Site Wide CSS */
 .blockquote {
