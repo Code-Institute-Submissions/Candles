@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'home.apps.HomeConfig',
     'shop.apps.ShopConfig',
     'products.apps.ProductsConfig',
-    'cart.apps.CartConfig',
+    'payment.apps.PaymentConfig',
 
 ]
 
@@ -139,3 +139,9 @@ LOGIN_URL = 'login'
 LOGOUT_URL = 'logout'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+STRIPE_PUBLISHABLE_KEY = 'pk_test_Y2i99BqaB4dkr4aoMQHwUpAw00qD1gBOEw'
+STRIPE_SECRET_KEY = 'sk_test_egN6QEqoGmTpPWdYRr7Vki8m004Rqld2qo'
+
+CART_SESSION_ID = 'cart'
+

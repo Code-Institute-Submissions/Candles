@@ -6,7 +6,7 @@ class Product(models.Model):
     price = models.DecimalField(max_digits=5, decimal_places=2)
     image = models.ImageField(null=True, blank=True, upload_to='images/')
     top_note_1 = models.CharField(max_length=254, default='')
-    top_note_2 = models.CharField(max_length=254, default='')
+    top_note_2 = models.CharField(max_length=254, blank=True)
     heart_note_1 = models.CharField(max_length=254, default='')
     base_note_1 = models.CharField(max_length=254, default='')
     
