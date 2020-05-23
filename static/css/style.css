@@ -291,6 +291,9 @@ a:focus {
     vertical-align: middle;
     display: inline-block;
 }
+.thumbnail {
+    width: 60px;
+}
 /* || Site Wide CSS */
 .blockquote {
     background-color: var(--black-theme);

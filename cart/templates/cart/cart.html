@@ -7,7 +7,7 @@
 {% block content %}
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12">pk=3
+            <div class="col-12">
                 <img src="{% static 'images/cart.svg' %}" alt="A shopping cart icon" style="width:60px;">
                 <h4>Cart</h4>
                 <table class="table table-hover table-light">
@@ -20,12 +20,16 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th scope="row"></th>
-                            <td>Soy-Wax Candle - Ascend</td>
-                            <td>2</td>
-                            <td>£39.00</td>
-                        </tr>
+                        {% for item in cart_items %}
+                            <tr>
+                                <th scope="row"><img src="{{MEDIA_URL}}{{item.product.image}}" class="thumbnail" alt="image of candles label"></th>
+                                <td>{{ item.product.name }}</td>
+                                <td>{{ item.quantity }}</td>
+                                <td>{{ item.total_price }}</td>
+                            </tr>
+                        {% endfor %}
+
+
                         <tr class="table-secondary">
                             <th scope="row">Total</th>
                             <td></td>

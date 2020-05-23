@@ -28,11 +28,17 @@
                                     <p class="m-0">Discover more...</p>
                                 </button>
                             </a>
-                            <a href="#" class="card-link">
-                                <button class="btn btn-lg btn-outline-dark">
-                                    <p class="m-0">Add to cart</p>
-                                </button>
-                            </a>
+
+                            <form method="post" action="{% url 'addToCart' product.id %}">
+                                {% csrf_token %}
+                                <div class="input-group">
+                                <input name="quantity" type="number" min="1" max="999" class="form-control" placeholder="Quantity">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-success" type="submit">Add</button>
+                                </span>
+                                </div>
+                            </form>
+                            
                             <a href="#" class="card-link">
                                 <button class="btn btn-lg btn-outline-dark">
                                     <p class="m-0">Quick Buy</p>
