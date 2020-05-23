@@ -1,0 +1,45 @@
+{% extends 'cart/base.html' %}
+
+{% block title %}0&X. | Shopping Cart{% endblock %}
+
+{% load static %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">pk=3
+                <img src="{% static 'images/cart.svg' %}" alt="A shopping cart icon" style="width:60px;">
+                <h4>Cart</h4>
+                <table class="table table-hover table-light">
+                    <thead>
+                        <tr>
+                            <th scope="col">Product</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row"></th>
+                            <td>Soy-Wax Candle - Ascend</td>
+                            <td>2</td>
+                            <td>£39.00</td>
+                        </tr>
+                        <tr class="table-secondary">
+                            <th scope="row">Total</th>
+                            <td></td>
+                            <td>2</td>
+                            <td>£78.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <span>
+                    <a class="btn btn-warning bt-lg btn-group" href="{% url 'displayShop' %}">Continue Shopping</a>
+                    <a class="btn btn-success bt-lg btn-group" href="{% url 'displayCheckout' %}">Checkout</a>
+                </span>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
