@@ -43,7 +43,6 @@ INSTALLED_APPS = [
     'shop.apps.ShopConfig',
     'products.apps.ProductsConfig',
     'payment.apps.PaymentConfig',
-    'cart.apps.CartConfig',
 ]
 
 MIDDLEWARE = [
@@ -71,7 +70,6 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
                 'django.template.context_processors.static',
-                'cart.context.cart_content',
             ],
         },
     },
@@ -143,4 +141,3 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 STRIPE_PUBLISHABLE_KEY = 'pk_test_Y2i99BqaB4dkr4aoMQHwUpAw00qD1gBOEw'
 STRIPE_SECRET_KEY = 'sk_test_egN6QEqoGmTpPWdYRr7Vki8m004Rqld2qo'
-

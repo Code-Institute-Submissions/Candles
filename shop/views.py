@@ -1,5 +1,9 @@
+import stripe
+
 from django.shortcuts import render
 from products.models import *
+from payment import *
+
 
 def displayShop(request):
     products = Product.objects.all()

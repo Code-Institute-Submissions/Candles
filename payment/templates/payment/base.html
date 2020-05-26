@@ -1,5 +1,4 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="en-uk">
 <head>
@@ -10,18 +9,25 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 </head>
 <body>
-    <main class="container-landing parent1">
-        <div class="logo-container grid1">
-            <img class="logo p-4 img-fluid" src="{% static 'images/logo.min.jpg' %}" alt="Company logo of 0&X."/>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-lg-6 ">
+                <img class="logo p-4 img-fluid" src="{% static 'images/logo.min.jpg' %}" alt="Company logo of 0&X."/>
+            </div>
         </div>
-        <div class="p-3 mb-5 grid5D">
-            {% block content %}
+    </div>
+    <div class="{{menu_class}} grid3">
+        <ul class="py-3 pl-3 pr-5 mr-5">
+            <li><a href={% url 'index' %}>Home</a></li>
+            <li><a href={% url 'displayShop' %}>Shop</a></li>
+            <li><a href={#}>About & Contact</a></li>
+            <li><a href={% url 'memberAreaDisplay' %}>Members Area</a></li>
+        </ul>
+    </div>
+    {% block content %}
        
-            {% endblock %}
-        </div>
-        
-    </main>
 
+    {% endblock %}
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
