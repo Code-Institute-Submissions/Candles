@@ -24,8 +24,8 @@
                         <div class="card-body">
                             <h5 class="card-title">£{{product.price}}</h5>
                             <a href="{% url 'displayProduct' product.id %}" class="card-link">
-                                <button class="btn btn-lg btn-outline-dark"> 
-                                    <p class="m-0">Discover more...</p>
+                                <button style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"> 
+                                    Discover more
                                 </button>
                             </a>
                             <button style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
@@ -50,10 +50,10 @@
                                 // a successful payment.
                                 // Instead use one of the strategies described in
                                 // https://stripe.com/docs/payments/checkout/fulfillment
-                                successUrl: 'http://127.0.1:8000/payment/success',
-                                cancelUrl: 'http://127.0.1:8000/payment/cancel',
+                                successUrl: 'http://127.0.1:8000/payment/success/',
+                                cancelUrl: 'http://127.0.1:8000/payment/cancel/',
                                 billingAddressCollection: 'required',
-                                shippingAddressCollection: {allowedCountries: ['US', 'CA'],}
+                                shippingAddressCollection: {allowedCountries: ['GB', 'US', 'CA'],}
                                 })
                                 .then(function (result) {
                                 if (result.error) {

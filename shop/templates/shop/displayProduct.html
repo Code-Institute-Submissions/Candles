@@ -69,9 +69,44 @@
                         </ul>
                         <div class="card-body">
                             <h5 class="card-title">£{{product.price}}</h5>
-                            <button>
-                                <a href="#" class="card-link">Quick Buy</a>
+                            <button style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
+                                id="checkout-button-{{product.stripe_id}}" role="link">Quick Buy
                             </button>
+                            <div id="error-message"></div>
+                            <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
+
+                            <script>
+                            (function() {
+                            var stripe = Stripe('pk_test_Y2i99BqaB4dkr4aoMQHwUpAw00qD1gBOEw');
+
+                            var checkoutButton = document.getElementById('checkout-button-{{product.stripe_id}}');
+                            checkoutButton.addEventListener('click', function () {
+                                // When the customer clicks on the button, redirect
+                                // them to Checkout.
+                                stripe.redirectToCheckout({
+                                lineItems: [{price: '{{product.stripe_id}}', quantity: 1}],
+                                mode: 'payment',
+                                // Do not rely on the redirect to the successUrl for fulfilling
+                                // purchases, customers may not always reach the success_url after
+                                // a successful payment.
+                                // Instead use one of the strategies described in
+                                // https://stripe.com/docs/payments/checkout/fulfillment
+                                successUrl: 'http://127.0.1:8000/payment/success/',
+                                cancelUrl: 'http://127.0.1:8000/payment/cancel/',
+                                billingAddressCollection: 'required',
+                                shippingAddressCollection: {allowedCountries: ['GB', 'US', 'CA'],}
+                                })
+                                .then(function (result) {
+                                if (result.error) {
+                                    // If `redirectToCheckout` fails due to a browser or network
+                                    // error, display the localized error message to your customer.
+                                    var displayError = document.getElementById('error-message');
+                                    displayError.textContent = result.error.message;
+                                }
+                                });
+                            });
+                            })();
+                            </script>
                         </div>
                     </div>
                 </div>
