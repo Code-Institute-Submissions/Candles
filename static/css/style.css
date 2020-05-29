@@ -152,6 +152,29 @@ li a {
 img {
     width: 80%;
 }
+button {
+    background: #3F84E5;
+    background: linear-gradient(90deg, #3F84E5 0%, #35a7ff 100%);
+    background: -moz-linear-gradient(90deg, #3F84E5 0%, #35a7ff 100%);
+    background: -webkit-linear-gradient(90deg, #3F84E5 0%, #35a7ff 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#3F84E5", endColorstr="#35a7ff", GradientType=1 );
+    color:#FFF;
+    padding:8px 12px;
+    border:0;
+    border-radius:4px;
+    font-size: var(--step--1)
+}
+button:hover,
+button:focus {
+    transition: 0.8s;
+    background: #ff930f;
+    background: linear-gradient(90deg, #ff930f 0%, #fffa5c 100%);
+    background: -moz-linear-gradient(90deg, #ff930f 0%, #fffa5c 100%);
+    background: -webkit-linear-gradient(90deg, #ff930f 0%, #fffa5c 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FF930F", endColorstr="#FFF95B", GradientType=1 );
+    color: var(--black-theme);
+    text-decoration: none;
+}
 
 /* || Landing Page CSS Grid Specific */
 .parent1 {
@@ -210,8 +233,15 @@ img {
     height: 100vh;
     margin: 0;
 }
+.logo {
+    width: 80%;
+}
+.logo-display {
+    width: 35%;
+}
 .logo-container {
     position: absolute;
+    min-height: 30vh;
     top: 0;
     left: 0;
 }

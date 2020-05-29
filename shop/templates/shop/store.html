@@ -4,6 +4,11 @@
 
 {% load static %}
 
+{% block page_heading %}
+    <h4>100% Soy Wax, Essential Oils, Wooden Wick</h4>
+    <br>
+    <h6>'Surely, your perfect candle?'</h6>
+{% endblock %}
 {% block content %}
     <div class="blockquote text-right">
         <div class="col-12">
@@ -24,21 +29,21 @@
                         <div class="card-body">
                             <h5 class="card-title">£{{ product.price }}</h5>
                             <a href="{% url 'displayProduct' product.id %}" class="card-link">
-                                <button style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"> 
+                                <button class="p-2"> 
                                     Discover more
                                 </button>
                             </a>
-                            <button class="buy-button snipcart-add-item"
+                            <button class=" p-2 buy-button snipcart-add-item"
                                 data-item-id="{{ product.id }}"
                                 data-item-price="{{ product.price }}"
                                 data-item-url= "/shop/"
                                 data-item-description="{{ product.description }}"
                                 data-item-image="{{ MEDIA_URL }}{{ product.image }}"
-                                data-item-name="{{ product.name }}" console.log('data-item-url') style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em">
+                                data-item-name="{{ product.name }}">
                                 Add to cart
                             </button>
-                            <button style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
-                                id="checkout-button-{{product.stripe_id}}" role="link">Quick Buy
+                            <button
+                                class="p-2" id="checkout-button-{{ product.stripe_id }}" role="link">Quick Buy
                             </button>
                             <div id="error-message"></div>
                             <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
@@ -47,12 +52,12 @@
                             (function() {
                             var stripe = Stripe('pk_test_Y2i99BqaB4dkr4aoMQHwUpAw00qD1gBOEw');
 
-                            var checkoutButton = document.getElementById('checkout-button-{{product.stripe_id}}');
+                            var checkoutButton = document.getElementById('checkout-button-{{ product.stripe_id   }}');
                             checkoutButton.addEventListener('click', function () {
                                 // When the customer clicks on the button, redirect
                                 // them to Checkout.
                                 stripe.redirectToCheckout({
-                                lineItems: [{price: '{{product.stripe_id}}', quantity: 1}],
+                                lineItems: [{price: '{{ product.stripe_id }}', quantity: 1}],
                                 mode: 'payment',
                                 // Do not rely on the redirect to the successUrl for fulfilling
                                 // purchases, customers may not always reach the success_url after
