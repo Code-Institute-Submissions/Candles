@@ -69,6 +69,15 @@
                         </ul>
                         <div class="card-body">
                             <h5 class="card-title">£{{product.price}}</h5>
+                            <button class="snipcart-add-item"
+                                data-item-id="{{product.id}}"
+                                data-item-price="{{product.price}}"
+                                data-item-url= ""
+                                data-item-description="{{product.description}}"
+                                data-item-image="{{MEDIA_URL}}{{product.image}}"
+                                data-item-name="{{product.name}}" style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em">
+                                Add to cart
+                            </button>
                             <button style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
                                 id="checkout-button-{{product.stripe_id}}" role="link">Quick Buy
                             </button>
