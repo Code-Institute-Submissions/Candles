@@ -14,16 +14,17 @@
     <script src="https://js.stripe.com/v3"></script>
 </head>
 <body>
-    <main class="container-landing parent2">
-        <div class="logo-container grid5">
-            <img class="img-fluid p-3" src="{% static 'images/logo.min.jpg' %}" alt="Company logo of 0&X." />
-        </div>
-        <div class="grid5B">
-            {% block content %}
-       
-            {% endblock %}
-        </div>
-        <div id="header" class="{{ menu_class }} grid5C">
+    <main class="wrapper-main">
+        <div class="top">
+            <div class="logo">
+                <img class="p-4" src="{% static 'images/logo.min.jpg' %}" alt="Company logo of 0&X."/>
+            </div>
+            <div class="statement p-3">
+                {% block page_heading %}
+
+                {% endblock %}
+            </div>
+        <div id="header" class="{{ menu_class }} menu">
             <ul class="py-3 pl-3 pr-5 mr-5">
                 <li><a href={% url 'index' %}>Home</a></li>
                 <li><a href={% url 'displayShop' %}>Shop</a></li>

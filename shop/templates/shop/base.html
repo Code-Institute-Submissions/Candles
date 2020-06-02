@@ -1,7 +1,7 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,17 +14,19 @@
     <script src="https://js.stripe.com/v3"></script>
 </head>
 <body>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12">
-                <img class="logo-display p-1" src="{% static 'images/logo.min.jpg' %}" alt="Company logo of 0&X."/>
+    <main class="wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="logo">
+                    <img class="p-3" src="{% static 'images/logo.min.jpg' %}" alt="Company logo of 0&X."/>
+                </div>
             </div>
         </div>
-    </div>
-    {% block content %}
+            {% block content %}
+
+            {% endblock %}
+    </main>
     
-    {% endblock %}
-    </div>
     <div hidden id="snipcart" data-api-key="NGUzZDFmNjQtMmE1YS00NGFkLWExOGMtZTA2YjAwM2FkOGI2NjM3MjMyNjIzMTI1NDM2ODky"></div>
     <script src="https://cdn.snipcart.com/themes/v3.0.14/default/snipcart.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

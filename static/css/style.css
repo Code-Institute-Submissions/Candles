@@ -150,7 +150,7 @@ li a {
     color: var(--main-theme-colour) !important;
 }
 img {
-    width: 100%;
+    width: 80%;
 }
 button {
     background: #3F84E5;
@@ -231,8 +231,6 @@ button:focus {
 .menu-container {
     background-color: var(--yellow-theme);
     color: var(--black-theme);
-    width: 100%;
-    height: 100%;
 }
 .shop-link-text{
     font-size: var(--step-5);
@@ -262,8 +260,6 @@ a:focus {
 .menu-shop {
     background-color: var(--blue-theme);
     color: var(--main-theme-colour);
-    width: 100%;
-    height: 100%;
 }
 .product-display{
     background-color: var(--black-theme);
@@ -278,8 +274,6 @@ a:focus {
 .menu-login {
     background-color: var(--black-theme);
     color: var(--main-theme-colour);
-    width: 100%;
-    height: 100%;
 }
 
 /* Cart specific css */
@@ -338,6 +332,7 @@ a:focus {
     }
     img {
         width: 100%;
+        max-width: 600px;
     }
   }
 
