@@ -185,7 +185,7 @@ button:focus {
 .top {
     display: grid;
     grid-template-areas: 
-        "logo blank blank"
+        "logo blank cart"
         "statement statement menu";
 }
 .logo {
@@ -200,6 +200,11 @@ button:focus {
 .menu {
     grid-area: menu;
     min-height: 200px;
+}
+.cart {
+    grid-area: cart;
+    align-self: start;
+    justify-self: end;
 }
 /* || Specific Typography */
 
@@ -277,19 +282,9 @@ a:focus {
 }
 
 /* Cart specific css */
-.cart-heading {
-    position: relative;;
-    top: 0;
-}
-.svg {
+img.snipcart-checkout {
     width: 80px;
-}
-.svg, .cart-text {
-    vertical-align: middle;
-    display: inline-block;
-}
-.thumbnail {
-    width: 60px;
+    padding:20px;
 }
 /* || Site Wide CSS */
 .blockquote {
@@ -323,7 +318,7 @@ a:focus {
 @media (max-width: 700px) {
     .top {
       grid-template-areas:
-        "logo blank"
+        "logo cart"
         "statement statement"
         "menu menu"
     }
