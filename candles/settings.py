@@ -132,5 +132,14 @@ STATICFILES_DIRS = [
     '/var/www/static/',
 ]
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
+LOGIN_REDIRECT_URL = 'dashboard'
+LOGIN_URL = 'login'
+LOGOUT_URL = 'logout'
+
+
+
+SNIPCART_TEST_API_KEY = 'NGUzZDFmNjQtMmE1YS00NGFkLWExOGMtZTA2YjAwM2FkOGI2NjM3MjMyNjIzMTI1NDM2ODky'
 
