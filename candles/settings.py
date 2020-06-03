@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'products.apps.ProductsConfig',
     'payment.apps.PaymentConfig',
     'contact.apps.ContactConfig',
+    'anymail',
 ]
 
 MIDDLEWARE = [
@@ -138,9 +139,18 @@ LOGIN_REDIRECT_URL = 'dashboard'
 LOGIN_URL = 'login'
 LOGOUT_URL = 'logout'
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = "anymail.backends.sendinblue.EmailBackend"
+EMAIL_HOST = 'smtp-relay.sendinblue.com'
+EMAIL_PORT = '587'
+EMAIL_HOST_USER = 'oandxcandles@gmail.com'
+EMAIL_HOST_PASSWORD = 'qpFbcZj58Gzkn72r'
+EMAIL_USE_TLS = True
+SENDINBLUE_API_KEY = "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"
+SENDINBLUE_API_URL = "https://api.sendinblue.com/v3/"
+
 
 STRIPE_PUBLISHABLE_KEY = 'pk_test_Y2i99BqaB4dkr4aoMQHwUpAw00qD1gBOEw'
 STRIPE_SECRET_KEY = 'sk_test_egN6QEqoGmTpPWdYRr7Vki8m004Rqld2qo'
 
 SNIPCART_TEST_API_KEY = 'NGUzZDFmNjQtMmE1YS00NGFkLWExOGMtZTA2YjAwM2FkOGI2NjM3MjMyNjIzMTI1NDM2ODky'
+
