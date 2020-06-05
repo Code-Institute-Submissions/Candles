@@ -3,6 +3,8 @@ from django.shortcuts import render
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 from .forms import LoginForm, UserRegistrationForm, EditUserForm, EditProfileForm
+from django.db.models.signals import post_save
+from django.dispatch import receiver
 from .models import Profile
 
 def memberAreaDisplay(request):
@@ -48,11 +50,11 @@ def register(request):
             )
             new_user.save()
             Profile.objects.create(user=new_user)
-            context = {'new_user':new_user}
+            context = {'new_user':new_user, 'menu_class': 'menu-login'}
             return render(request, 'account/register_done.html', context)
     else:
         user_form = UserRegistrationForm()
-        context = {'user_form':user_form}
+        context = {'user_form':user_form, 'menu_class': 'menu-login'}
     return render(request, 'account/register.html', context)
 
 @login_required
@@ -64,9 +66,13 @@ def editProfile(request):
         if user_form.is_valid() and profile_form.is_valid():
             user_form.save()
             profile_form.save()
+            context = {'menu_class': 'menu-login'}
+        return render(request, 'account/profileUpdated.html', context)
     else:
         user_form = EditUserForm(instance=request.user)
         profile_form = EditProfileForm(instance=request.user.profile)
 
-    context = {'user_form':user_form, 'profile_form': profile_form}
+    context = {'user_form':user_form, 'profile_form': profile_form, 'menu_class': 'menu-login'}
     return render(request, 'account/editProfile.html', context)
+
+
