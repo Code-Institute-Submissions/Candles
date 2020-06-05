@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'products.apps.ProductsConfig',
     'payment.apps.PaymentConfig',
     'contact.apps.ContactConfig',
+    'review.apps.ReviewConfig',
     'anymail',
 ]
 

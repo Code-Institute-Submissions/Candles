@@ -1,7 +1,6 @@
 from django.db import models
 from django.conf import settings
 
-
 """
 Creating a user member profile model. This has a one-to-one relationship with 
 the new user created from UserRegistrationForm in the Member Area of the site.
