@@ -2,10 +2,10 @@
 
 {% block title%}0&X. | Welcome{% endblock %}
 
-{% block content %}
-<section class="m-2 p-2">
-    <h4>Welcome {{ new_user.first_name }}!</h4>
-    <h6>Your account has been successfully created.</h6>
-    <h6>You can now log into your account, <a id="link" href="{% url 'login' %}">click here.</a></h6>
-</section>
+{% block page_heading %}
+    <section class="m-2 p-2">
+        <h4>Welcome {{ new_user.first_name }}!</h4>
+        <h6>Your account has been successfully created.</h6>
+        <h6>You can now log into your account, <a id="link" href="{% url 'login' %}">click here.</a></h6>
+    </section>
 {% endblock %}

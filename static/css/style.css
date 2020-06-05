@@ -188,6 +188,12 @@ button:focus {
         "logo blank cart"
         "statement statement menu";
 }
+.top-product {
+    display: grid;
+    grid-template-areas:
+        "logo blank cart"
+        "product product product"
+}
 .logo {
     grid-area: logo;
     min-height: 200px;
@@ -202,9 +208,14 @@ button:focus {
     min-height: 200px;
 }
 .cart {
+    margin:4
+    0px;
     grid-area: cart;
     align-self: start;
     justify-self: end;
+}
+.product {
+    grid-area: product;
 }
 /* || Specific Typography */
 
@@ -246,10 +257,15 @@ a {
     color: var(--main-theme-colour);
     text-decoration: none;
 }
+a#link {
+    color: var(--black-theme);
+}
 a:hover,
-a:focus {
+a:focus,
+a#link:hover,
+a#link:focus {
     transition: 0.5s;
-    color: var(--red-theme);
+    color: var(--yellow-theme);
     text-decoration: none;
 }
 .shop-link-arrow {
@@ -265,9 +281,6 @@ a:focus {
 .menu-shop {
     background-color: var(--blue-theme);
     color: var(--main-theme-colour);
-}
-.product-display{
-    background-color: var(--black-theme);
 }
 .store-bground {
     background-color: var(--black-theme);
@@ -286,11 +299,24 @@ img.snipcart-checkout {
     width: 80px;
     padding:20px;
 }
+.cart:hover,
+.cart:focus {
+    color: var(--red-theme);
+    border: solid 1px var(--black-theme);
+    border-radius: 5px;
+}
 /* || Site Wide CSS */
 .blockquote {
     background-color: var(--black-theme);
-    color: var(--yellow-theme);
+    color: var(--main-theme-colour);
     margin-bottom: 0;
+}
+.blockquote-footer {
+    color: var(--main-theme-colour);
+    padding-bottom: 2em;
+}
+p:first-child {
+    font-size: var(--step-0);
 }
 .card {
     border: none;
@@ -300,6 +326,9 @@ img.snipcart-checkout {
 }
 ul {
     list-style: none;
+    font-size: var(--step--1);
+}
+ul#menu-list {
     font-size: var(--step-1);
 }
 a:hover,

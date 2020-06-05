@@ -1,9 +1,8 @@
-
 {% extends 'shop/base.html' %}
 
 {% load static %}
 
-{% block content %}
+{% block page_heading %}
 <div class="container-fluid">
     <div class="row">
     <div class="col-12 col-md-6">
@@ -18,31 +17,22 @@
                     <img class="p-5 m-5 d-block w-100" src="{{MEDIA_URL}}{{product.image}}" alt="Image of candle" width="100%" />
                 </div>
                 <div class="carousel-item" data-interval="2000">
+                    <img class="p-5 m-5 d-block w-100" src="{% static 'images/candle1.min.jpg' %}" alt="Image of candle" width="100%" />
+                </div>
+                <div class="carousel-item" data-interval="2000">
                     <img class="p-5 m-5 d-block w-100" src="{% static 'images/photo1.min.jpg' %}" alt="Image of candle" width="100%" />
                 </div>
                 <div class="carousel-item" data-interval="2000">
                     <img class="p-5 m-5 d-block w-100" src="{% static 'images/photo2.min.jpg' %}" alt="Image of candle" width="100%" />
                 </div>
                 <div class="carousel-item" data-interval="2000">
+                    <img class="p-5 m-5 d-block w-100" src="{% static 'images/candle3.min.jpg' %}" alt="Image of candle" width="100%" />
+                </div>
+                <div class="carousel-item" data-interval="2000">
                     <img class="p-5 m-5 d-block w-100" src="{% static 'images/photo3.min.jpg' %}" alt="Image of candle" width="100%" />
                 </div>
                 <div class="carousel-item" data-interval="2000">
                     <img class="p-5 m-5 d-block w-100" src="{% static 'images/photo4.min.jpg' %}" alt="Image of candle" width="100%" />
-                </div>
-                <div class="carousel-item" data-interval="2000">
-                    <img class="p-5 m-5 d-block w-100" src="{% static 'images/photo5.min.jpg' %}" alt="Image of candle" width="100%" />
-                </div>
-                <div class="carousel-item" data-interval="2000">
-                    <img class="p-5 m-5 d-block w-100" src="{% static 'images/photo6.min.jpg' %}" alt="Image of candle" width="100%" />
-                </div>
-                <div class="carousel-item" data-interval="2000">
-                    <img class="p-5 m-5 d-block w-100" src="{% static 'images/photo7.min.jpg' %}" alt="Image of candle" width="100%" />
-                </div>
-                <div class="carousel-item" data-interval="2000">
-                    <img class="p-5 m-5 d-block w-100" src="{% static 'images/photo8.min.jpg' %}" alt="Image of candle" width="100%" />
-                </div>
-                <div class="carousel-item" data-interval="2000">
-                    <img class="p-5 m-5 d-block w-100" src="{% static 'images/photo10.min.jpg' %}" alt="Image of candle" width="100%" />
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">

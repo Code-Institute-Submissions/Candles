@@ -24,26 +24,27 @@
 
                 {% endblock %}
             </div>
-        <div id="header" class="{{ menu_class }} menu">
-            <ul class="py-3 pl-3 pr-5 mr-5">
-                <li><a href={% url 'index' %}>Home</a></li>
-                <li><a href={% url 'displayShop' %}>Shop</a></li>
-                {% if not request.user.is_authenticated %}
-                    <li><a href={% url 'register' %}>Member Registration</a></li>
-                    <li><a href={% url 'login' %}>Member Login</a></li>
-                {% endif %}
-                {% if request.user.is_authenticated %}
-                    <li>
-                        <a href="{% url 'dashboard' %}">My dashboard</a>
-                    </li>
-                    <li>
-                        <a href="{% url 'editProfile' %}">Edit my profile</a>
-                    </li>
-                    <li>
-                        <a href={% url 'logout' %}>Logout</a>
-                    </li>
-                {% endif %}
-            </ul>
+            <div class="{{ menu_class }} menu">
+                <ul id="menu-list" class="py-3 pl-3 pr-5 mr-5">
+                    <li><a href={% url 'index' %}>Home</a></li>
+                    <li><a href={% url 'displayShop' %}>Shop</a></li>
+                    {% if not request.user.is_authenticated %}
+                        <li><a href={% url 'register' %}>Member Registration</a></li>
+                        <li><a href={% url 'login' %}>Member Login</a></li>
+                    {% endif %}
+                    {% if request.user.is_authenticated %}
+                        <li>
+                            <a href="{% url 'dashboard' %}">My dashboard</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'editProfile' %}">Edit my profile</a>
+                        </li>
+                        <li>
+                            <a href={% url 'logout' %}>Logout</a>
+                        </li>
+                    {% endif %}
+                </ul>
+            </div>
         </div>
     </main>
     <div hidden id="snipcart" data-api-key="NGUzZDFmNjQtMmE1YS00NGFkLWExOGMtZTA2YjAwM2FkOGI2NjM3MjMyNjIzMTI1NDM2ODky"></div>

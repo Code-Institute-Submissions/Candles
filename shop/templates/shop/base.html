@@ -14,17 +14,22 @@
     <script src="https://js.stripe.com/v3"></script>
 </head>
 <body>
-    <main class="wrapper">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="logo">
-                    <img class="p-3" src="{% static 'images/logo.min.jpg' %}" alt="Company logo of 0&X."/>
-                </div>
+    <main class="wrapper-main">
+        <div class="top-product">
+            <div class="logo">
+                <img class="p-3" src="{% static 'images/logo.min.jpg' %}" alt="Company logo of 0&X."/>
+            </div>
+            <div class="cart p-5">
+                <img class="snipcart-checkout p-3" src="{% static 'images/cart.svg' %}" alt="Company logo of 0&X."/><br>
+                <span class="snipcart-items-count p-3"></span><br>
+                <span class="snipcart-total-price p-3"></span>
+            </div>
+            <div class="product">
+                {% block page_heading %}
+
+                {% endblock %}
             </div>
         </div>
-            {% block content %}
-
-            {% endblock %}
     </main>
     
     <div hidden id="snipcart" data-api-key="NGUzZDFmNjQtMmE1YS00NGFkLWExOGMtZTA2YjAwM2FkOGI2NjM3MjMyNjIzMTI1NDM2ODky"></div>

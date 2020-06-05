@@ -1,8 +1,5 @@
 *.sqlite3
 *.pyc
 __pycache__/
-candles/settings.py
-candles/asgi.py
-candles/wsgi.py
-candles/__init__.py
+.env
 
