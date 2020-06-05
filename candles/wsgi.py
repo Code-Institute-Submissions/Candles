@@ -12,5 +12,7 @@ import os
 from django.core.wsgi import get_wsgi_application
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'candles.settings')
+project_folder = os.path.expanduser('~/candles')  # adjust as appropriate
+load_dotenv(os.path.join(project_folder, '.env'))
 
 application = get_wsgi_application()
