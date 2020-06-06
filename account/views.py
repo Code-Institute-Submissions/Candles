@@ -30,7 +30,7 @@ def user_login(request):
                 return HttpResponse('Invalid Login')
     else:
         form = LoginForm()
-        context = {'form': form, 'menu_class': menu-login}
+        context = {'form': form, 'menu_class': 'menu-login'}
     return render(request, 'account/login.html', context)
 
 @login_required

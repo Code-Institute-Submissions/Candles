@@ -9,6 +9,7 @@ class LoginForm(forms.Form):
     username = forms.CharField()
     password = forms.CharField(widget=forms.PasswordInput)
 
+
 class UserRegistrationForm(forms.ModelForm):
     password1 = forms.CharField(label='Password', widget=forms.PasswordInput)
     password2 = forms.CharField(label='Repeat password', widget=forms.PasswordInput)
@@ -23,10 +24,12 @@ class UserRegistrationForm(forms.ModelForm):
             raise forms.ValidationError('Unfortunately, your passwords dont\'t match.')
         return cd['password2']
 
+
 class EditUserForm(forms.ModelForm):
     class Meta:
         model = User
         fields = ('first_name', 'last_name', 'email')
+
 
 class EditProfileForm(forms.ModelForm):
     class Meta:

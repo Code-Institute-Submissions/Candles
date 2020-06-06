@@ -17,22 +17,13 @@
                     <img class="p-5 m-5 d-block w-100" src="{{MEDIA_URL}}{{product.image}}" alt="Image of candle" width="100%" />
                 </div>
                 <div class="carousel-item" data-interval="2000">
-                    <img class="p-5 m-5 d-block w-100" src="{% static 'images/candle1.min.jpg' %}" alt="Image of candle" width="100%" />
+                    <img class="p-5 m-5 d-block w-100" src="https://res.cloudinary.com/peggy-co/image/upload/c_scale,h_360,w_640/v1591293974/Candles/oandx1_fmj9vb.jpg" width="100%" />
                 </div>
                 <div class="carousel-item" data-interval="2000">
-                    <img class="p-5 m-5 d-block w-100" src="{% static 'images/photo1.min.jpg' %}" alt="Image of candle" width="100%" />
+                    <img class="p-5 m-5 d-block w-100" src="https://res.cloudinary.com/peggy-co/image/upload/v1591293829/Candles/photo4.min_qxj9xg.jpg" alt="Image of candle" width="100%" />
                 </div>
                 <div class="carousel-item" data-interval="2000">
-                    <img class="p-5 m-5 d-block w-100" src="{% static 'images/photo2.min.jpg' %}" alt="Image of candle" width="100%" />
-                </div>
-                <div class="carousel-item" data-interval="2000">
-                    <img class="p-5 m-5 d-block w-100" src="{% static 'images/candle3.min.jpg' %}" alt="Image of candle" width="100%" />
-                </div>
-                <div class="carousel-item" data-interval="2000">
-                    <img class="p-5 m-5 d-block w-100" src="{% static 'images/photo3.min.jpg' %}" alt="Image of candle" width="100%" />
-                </div>
-                <div class="carousel-item" data-interval="2000">
-                    <img class="p-5 m-5 d-block w-100" src="{% static 'images/photo4.min.jpg' %}" alt="Image of candle" width="100%" />
+                    <img class="p-5 m-5 d-block w-100" src="https://res.cloudinary.com/peggy-co/image/upload/v1591293829/Candles/photo6.min_syim2f.jpg" alt="Image of candle" width="100%" />
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -52,8 +43,7 @@
                 <p class="card-text">{{product.description}}</p>
             </div>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">{{product.top_note_1}}</li>
-                <li class="list-group-item">{{product.top_note_2}}</li>
+                <li class="list-group-item">{{product.top_note_1}}/{{product.top_note_2}}</li>
                 <li class="list-group-item">{{product.heart_note_1}}</li>
                 <li class="list-group-item">{{product.base_note_1}}</li>
             </ul>
