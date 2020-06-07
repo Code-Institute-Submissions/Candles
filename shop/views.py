@@ -3,6 +3,7 @@ import stripe
 from django.shortcuts import render
 from products.models import *
 from payment import *
+from review.models import Review
 
 
 def displayShop(request):
@@ -12,5 +13,6 @@ def displayShop(request):
 
 def displayProduct(request, pk):
     product = Product.objects.get(id=pk)
-    context = {'product':product}
+    reviews = Review.objects.filter(product_id=pk).order_by('-date').values()
+    context = {'product':product, 'reviews': reviews}
     return render(request, 'shop/displayProduct.html', context)

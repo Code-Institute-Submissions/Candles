@@ -5,103 +5,122 @@
 {% block page_heading %}
 <div class="container-fluid">
     <div class="row">
-    <div class="col-12 col-md-6">
-        <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-                <div class="carousel-item active" data-interval="2000">
-                    <img class="p-5 m-5 d-block w-100" src="{{MEDIA_URL}}{{product.image}}" alt="Image of candle" width="100%" />
+        <div class="col-12 col-md-6">
+            <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-interval="2000">
+                        <img class="p-5 m-5 d-block w-100" src="{{MEDIA_URL}}{{product.image}}" alt="Image of candle" width="100%" />
+                    </div>
+                    <div class="carousel-item" data-interval="2000">
+                        <img class="p-5 m-5 d-block w-100" src="https://res.cloudinary.com/peggy-co/image/upload/c_scale,h_360,w_640/v1591293974/Candles/oandx1_fmj9vb.jpg" width="100%" />
+                    </div>
+                    <div class="carousel-item" data-interval="2000">
+                        <img class="p-5 m-5 d-block w-100" src="https://res.cloudinary.com/peggy-co/image/upload/v1591293829/Candles/photo4.min_qxj9xg.jpg" alt="Image of candle" width="100%" />
+                    </div>
+                    <div class="carousel-item" data-interval="2000">
+                        <img class="p-5 m-5 d-block w-100" src="https://res.cloudinary.com/peggy-co/image/upload/v1591293829/Candles/photo6.min_syim2f.jpg" alt="Image of candle" width="100%" />
+                    </div>
                 </div>
-                <div class="carousel-item" data-interval="2000">
-                    <img class="p-5 m-5 d-block w-100" src="https://res.cloudinary.com/peggy-co/image/upload/c_scale,h_360,w_640/v1591293974/Candles/oandx1_fmj9vb.jpg" width="100%" />
-                </div>
-                <div class="carousel-item" data-interval="2000">
-                    <img class="p-5 m-5 d-block w-100" src="https://res.cloudinary.com/peggy-co/image/upload/v1591293829/Candles/photo4.min_qxj9xg.jpg" alt="Image of candle" width="100%" />
-                </div>
-                <div class="carousel-item" data-interval="2000">
-                    <img class="p-5 m-5 d-block w-100" src="https://res.cloudinary.com/peggy-co/image/upload/v1591293829/Candles/photo6.min_syim2f.jpg" alt="Image of candle" width="100%" />
-                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
         </div>
-    </div>
-    <div class="col-12 col-md-4 mx-auto">
-        <div class="card">
-            <div class="card-body">
-                <h4 class="card-title">{{product.name}}</h4>
-                <p class="card-text">{{product.description}}</p>
-            </div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">{{product.top_note_1}}/{{product.top_note_2}}</li>
-                <li class="list-group-item">{{product.heart_note_1}}</li>
-                <li class="list-group-item">{{product.base_note_1}}</li>
-            </ul>
-            <div class="card-body">
-                <h5 class="card-title">£{{product.price}}</h5>
-                <button class="snipcart-add-item"
-                    data-item-id="{{product.id}}"
-                    data-item-price="{{product.price}}"
-                    data-item-url= ""
-                    data-item-description="{{product.description}}"
-                    data-item-image="{{MEDIA_URL}}{{product.image}}"
-                    data-item-name="{{product.name}}" style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em">
-                    Add to cart
-                </button>
-                <button style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
-                    id="checkout-button-{{product.stripe_id}}" role="link">Quick Buy
-                </button>
-                <div id="error-message"></div>
-                <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
+        <div class="col-12 col-md-4 mx-auto">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">{{product.name}}</h4>
+                    <p class="card-text">{{product.description}}</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">{{product.top_note_1}}/{{product.top_note_2}}</li>
+                    <li class="list-group-item">{{product.heart_note_1}}</li>
+                    <li class="list-group-item">{{product.base_note_1}}</li>
+                </ul>
+                <div class="card-body">
+                    <h5 class="card-title">£{{product.price}}</h5>
+                    <button class="snipcart-add-item"
+                        data-item-id="{{product.id}}"
+                        data-item-price="{{product.price}}"
+                        data-item-url= ""
+                        data-item-description="{{product.description}}"
+                        data-item-image="{{MEDIA_URL}}{{product.image}}"
+                        data-item-name="{{product.name}}" style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em">
+                        Add to cart
+                    </button>
+                    <button style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
+                        id="checkout-button-{{product.stripe_id}}" role="link">Quick Buy
+                    </button>
+                    <div id="error-message"></div>
+                    <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
 
-                <script>
-                (function() {
-                var stripe = Stripe('pk_test_Y2i99BqaB4dkr4aoMQHwUpAw00qD1gBOEw');
+                    <script>
+                    (function() {
+                    var stripe = Stripe('pk_test_Y2i99BqaB4dkr4aoMQHwUpAw00qD1gBOEw');
 
-                var checkoutButton = document.getElementById('checkout-button-{{product.stripe_id}}');
-                checkoutButton.addEventListener('click', function () {
-                    // When the customer clicks on the button, redirect
-                    // them to Checkout.
-                    stripe.redirectToCheckout({
-                    lineItems: [{price: '{{product.stripe_id}}', quantity: 1}],
-                    mode: 'payment',
-                    // Do not rely on the redirect to the successUrl for fulfilling
-                    // purchases, customers may not always reach the success_url after
-                    // a successful payment.
-                    // Instead use one of the strategies described in
-                    // https://stripe.com/docs/payments/checkout/fulfillment
-                    successUrl: 'http://127.0.1:8000/payment/success/',
-                    cancelUrl: 'http://127.0.1:8000/payment/cancel/',
-                    billingAddressCollection: 'required',
-                    shippingAddressCollection: {allowedCountries: ['GB', 'US', 'CA'],}
-                    })
-                    .then(function (result) {
-                    if (result.error) {
-                        // If `redirectToCheckout` fails due to a browser or network
-                        // error, display the localized error message to your customer.
-                        var displayError = document.getElementById('error-message');
-                        displayError.textContent = result.error.message;
-                    }
+                    var checkoutButton = document.getElementById('checkout-button-{{product.stripe_id}}');
+                    checkoutButton.addEventListener('click', function () {
+                        // When the customer clicks on the button, redirect
+                        // them to Checkout.
+                        stripe.redirectToCheckout({
+                        lineItems: [{price: '{{product.stripe_id}}', quantity: 1}],
+                        mode: 'payment',
+                        // Do not rely on the redirect to the successUrl for fulfilling
+                        // purchases, customers may not always reach the success_url after
+                        // a successful payment.
+                        // Instead use one of the strategies described in
+                        // https://stripe.com/docs/payments/checkout/fulfillment
+                        successUrl: 'http://127.0.1:8000/payment/success/',
+                        cancelUrl: 'http://127.0.1:8000/payment/cancel/',
+                        billingAddressCollection: 'required',
+                        shippingAddressCollection: {allowedCountries: ['GB', 'US', 'CA'],}
+                        })
+                        .then(function (result) {
+                        if (result.error) {
+                            // If `redirectToCheckout` fails due to a browser or network
+                            // error, display the localized error message to your customer.
+                            var displayError = document.getElementById('error-message');
+                            displayError.textContent = result.error.message;
+                        }
+                        });
                     });
-                });
-                })();
-                </script>
+                    })();
+                    </script>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="blockquote text-left col-12">
-        <span class="shop-link-arrow">.<</span><span class="shop-link-text"><a href="{% url 'displayShop' %}">Shop</a></span>
-    </div>
+        {% if reviews %}
+            <div class="col-12 col-md-6">
+                <span><h3>Member Reviews</h3></span>
+                    {% for review in reviews %}
+                        <div class="card">
+                            <div class="card-header">
+                            {{ review.review_title }}
+                            </div>
+                            <div class="card-body">
+                                <blockquote class="mb-0">
+                                    <p>{{ review.review_text }}</p>
+                                    <p>{{ review.user
+                                }}</p>
+                                </blockquote>
+                            </div>
+                        </div>
+                    {% endfor %}
+            </div>
+        {% endif %}
+        <div class="blockquote text-left col-12">
+            <span class="shop-link-arrow">.<</span><span class="shop-link-text"><a href="{% url 'displayShop' %}">Shop</a></span>
+        </div>
     </div>
 </div>
 {% endblock %}
