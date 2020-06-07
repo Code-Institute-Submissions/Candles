@@ -1,15 +1,21 @@
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
-from django.http import HttpResponseRedirect
-from .forms import *
+from .forms import ReviewForm
+from django.utils import timezone
 
 @login_required
 def writeReview(request):
     if request.method == 'POST':
-        form = ReviewForm(request.POST)
-        if form.is_valid():
-            return HttpResponseRedirect('/thanks')
+        review_form = ReviewForm(request.POST)
+        if review_form.is_valid():
+            new_review = review_form.save(commit=False)
+            new_review.user = request.user
+            new_review.date = timezone.now() 
+            new_review.save()
+
+            context = {'form': new_review, 'menu_class': 'menu-login'}
+            return render(request, 'review/review_submitted.html', context)
     else:
-        form = ReviewForm()
-    context = {'form': form, 'menu_class': 'menu-login'}
+        review_form = ReviewForm()
+    context = {'form': review_form, 'menu_class': 'menu-login'}
     return render(request, 'review/displayWriteReview.html', context)
