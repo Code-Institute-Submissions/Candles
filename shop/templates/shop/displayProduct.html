@@ -17,9 +17,6 @@
                         <img class="p-5 m-5 d-block w-100" src="{{MEDIA_URL}}{{product.image}}" alt="Image of candle" width="100%" />
                     </div>
                     <div class="carousel-item" data-interval="2000">
-                        <img class="p-5 m-5 d-block w-100" src="https://res.cloudinary.com/peggy-co/image/upload/c_scale,h_360,w_640/v1591293974/Candles/oandx1_fmj9vb.jpg" width="100%" />
-                    </div>
-                    <div class="carousel-item" data-interval="2000">
                         <img class="p-5 m-5 d-block w-100" src="https://res.cloudinary.com/peggy-co/image/upload/v1591293829/Candles/photo4.min_qxj9xg.jpg" alt="Image of candle" width="100%" />
                     </div>
                     <div class="carousel-item" data-interval="2000">
@@ -110,8 +107,7 @@
                             <div class="card-body">
                                 <blockquote class="mb-0">
                                     <p>{{ review.review_text }}</p>
-                                    <p>{{ review.user
-                                }}</p>
+                                    <p>{{ user.username }} - {{ review.date }}</p>
                                 </blockquote>
                             </div>
                         </div>
