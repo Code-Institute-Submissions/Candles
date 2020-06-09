@@ -208,8 +208,7 @@ button:focus {
     min-height: 200px;
 }
 .cart {
-    margin:4
-    0px;
+    margin: 20px;
     grid-area: cart;
     align-self: start;
     justify-self: end;
@@ -296,7 +295,7 @@ a#link:focus {
 
 /* Cart specific css */
 img.snipcart-checkout {
-    width: 80px;
+    width: 60px;
     padding:20px;
 }
 .cart:hover,
@@ -320,6 +319,9 @@ p:first-child {
 }
 .card {
     border: none;
+}
+.card-header {
+    background-color: var(--yellow-theme);
 }
 .tao-statement {
     font-size: var(--step-1);

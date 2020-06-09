@@ -1,14 +1,10 @@
 from django import forms
 from django.contrib.auth.models import User
-from django.db.models.signals import post_save
-from django.core.mail import send_mail, EmailMessage
-from django.dispatch import receiver
 from .models import Profile
 
 class LoginForm(forms.Form):
     username = forms.CharField()
     password = forms.CharField(widget=forms.PasswordInput)
-
 
 class UserRegistrationForm(forms.ModelForm):
     password1 = forms.CharField(label='Password', widget=forms.PasswordInput)
@@ -23,7 +19,6 @@ class UserRegistrationForm(forms.ModelForm):
         if cd['password1'] != cd['password2']:
             raise forms.ValidationError('Unfortunately, your passwords dont\'t match.')
         return cd['password2']
-
 
 class EditUserForm(forms.ModelForm):
     class Meta:

@@ -10,8 +10,8 @@
         <h6>We're so glad you've decided to join us!</h6>
         <h6>Please fill in your details below</h6>
         <form method='POST'>
-            {{ user_form|crispy }}
             {% csrf_token %}
+            {{ user_form|crispy }}
             <button type="submit" class="btn btn-warning">Register</button>
         </form>
     </section>
