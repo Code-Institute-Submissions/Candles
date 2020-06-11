@@ -10,13 +10,13 @@
         {% csrf_token %}
         <div class="row">
             <div class="form-group col-12 col-md-6">
-                <input type="text" class="form-control" name="message-name" placeholder="Your name">
+                <input type="text" class="form-control" name="message-name" placeholder="Your name" required="true">
             </div>
             <div class="form-group col-12 col-md-6">
-                <input type="email" class="form-control" name="message-email" placeholder="Your email address">
+                <input type="email" class="form-control" name="message-email" placeholder="Your email address" required="true">
             </div>
             <div class="form-group col-12">
-                <textarea class="form-control" name="message-body" placeholder="Your message" rows="8" cols="100"></textarea>
+                <textarea class="form-control" name="message-body" placeholder="Your message" rows="8" cols="100"  required="true"></textarea>
             </div>
             <div class="form-group col-12 col-md-6">
                 <button type="submit" class="btn btn-primary">Submit</button>

@@ -80,7 +80,7 @@
                         successUrl: 'http://127.0.1:8000/payment/success/',
                         cancelUrl: 'http://127.0.1:8000/payment/cancel/',
                         billingAddressCollection: 'required',
-                        shippingAddressCollection: {allowedCountries: ['GB', 'US', 'CA'],}
+                        shippingAddressCollection: {allowedCountries: ['GB'],}
                         })
                         .then(function (result) {
                         if (result.error) {
