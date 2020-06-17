@@ -14,6 +14,7 @@ class Review(models.Model):
     def publish(self):
         self.date = timezone.now()
         self.save()
+        return self.date
 
     def __str__(self):
         return f'Review for user {self.user.username}'

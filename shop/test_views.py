@@ -9,11 +9,12 @@ from products.models import *
 class ShopViewTest(TestCase):
     @classmethod
     def setUpTestData(self):
-        Product.objects.create(name='New Candle',
+        product_test = Product.objects.create(name='New Candle',
             description='A description', price='45.00',
             top_note_1='Lavender', top_note_2='Mint',
             heart_note_1='Bergamot', base_note_1='Oud',
             stripe_id='StripeID10')
+        product_test.save()
 
     def test_correct_shop_view_page_displayed_at_desired_location(self):
         response = self.client.get('/')
@@ -47,6 +48,3 @@ class ShopViewTest(TestCase):
         self.assertTrue(product.name=='New Candle')
         self.assertTrue(product.price==45.00)
         
-    """
-    unable to complete the rendering and context dictionary tests?
-    """
