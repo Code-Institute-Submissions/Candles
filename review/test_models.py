@@ -43,5 +43,8 @@ class TestProductModel(TestCase):
         expected_string = f'Review for user {reviewer}'
         self.assertTrue(expected_string, 'Review for user testuser1')
 
+    """
+    Need help to test context data and render template?
+    """
     
     

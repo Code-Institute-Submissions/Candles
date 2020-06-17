@@ -1,7 +1,5 @@
 from django.test import TestCase, Client
 from django.urls import reverse
-from django.shortcuts import render
-from django.template.response import TemplateResponse
 
 from shop.views import *
 from products.models import *
