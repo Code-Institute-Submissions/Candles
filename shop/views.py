@@ -5,7 +5,6 @@ from products.models import *
 from payment import *
 from review.models import Review
 
-
 def displayShop(request):
     products = Product.objects.all()
     context = {'products': products, 'menu_class': 'menu-shop'}
