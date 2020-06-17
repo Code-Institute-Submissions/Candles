@@ -5,7 +5,6 @@ from django.core.mail import EmailMessage
 from .forms import SendEmailMessage
 
 def emailContact(request):
-    
     if request.method == 'POST':
         form = SendEmailMessage(request.POST)
         if form.is_valid():
