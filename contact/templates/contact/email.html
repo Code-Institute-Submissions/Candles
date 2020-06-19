@@ -7,11 +7,14 @@
 {% block title %}0&X | Contact us{% endblock %}
 
 {% block page_heading %}
-    <h4>Send us an email</h4>
+    <h5>Have a burning question on your mind?</h5>
     <form action="{% url 'emailContact' %}" method="POST">
         {% csrf_token %}
         {{ form|crispy }}
         <button type="submit" class="btn btn-warning">Send</button>
     </form>
+    <a href="{% url 'index' %}">
+        <button type="text" class="btn btn-warning pt-2">Cancel</button>
+    </a>
 {% endblock %}
     

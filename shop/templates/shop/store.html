@@ -5,7 +5,7 @@
 {% load static %}
 
 {% block page_heading %}
-    <h4>100% Soy Wax, Essential Oils, Wooden Wick</h4>
+    <h5>100% Soy Wax, Essential Oils, Wooden Wick</h5>
     <br>
     <h6>'Surely, your perfect candle?'</h6>
 {% endblock %}
@@ -13,7 +13,7 @@
     <div class="blockquote text-right p-3">
         <div class="col-12 col-md-10 mx-auto">
             <p class="mx-2 px-2 pt-2 mx-md-5 px-md-5 pt-md-5 text-left border-left">"Discover our range of carefully and lovingly crafted soy wax candles. Embellished with delicious essential or fragrance oils, expand in it's treasured scent. If you like to break from the norm, prefer to zag whilst the majority zig, we think you'll love our candles at 0&X.<br><br>
-            We pour as much love and light into each creation as we can. Your candle is always hand-made-to-order, we do not create them in batches. This is a great celebration in your personal investment."</p>
+            We pour as much love and light into each creation as we can. Your candle is always hand-made-to-order, we do not create them in batches. This is a great celebration of your personal investment."</p>
             <footer class="blockquote-footer">0&X. - A statement of our heart.</footer>
         </div>
     </div>
@@ -30,11 +30,11 @@
                         <div class="card-body">
                             <h5 class="card-title">£{{ product.price }}</h5>
                             <a href="{% url 'displayProduct' product.id %}" class="card-link">
-                                <button class="p-2"> 
+                                <button class="p-2 m-1"> 
                                     Discover more
                                 </button>
                             </a>
-                            <button class=" p-2 buy-button snipcart-add-item"
+                            <button class=" p-2 m-1 buy-button snipcart-add-item"
                                 data-item-id="{{ product.id }}"
                                 data-item-price="{{ product.price }}"
                                 data-item-url= "/shop/"
@@ -44,7 +44,7 @@
                                 Add to cart
                             </button>
                             <button
-                                class="p-2" id="checkout-button-{{ product.stripe_id }}" role="link">Quick Buy
+                                class="p-2 m-1" id="checkout-button-{{ product.stripe_id }}" role="link">Quick Buy
                             </button>
                             <div id="error-message"></div>
                             <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
@@ -93,7 +93,7 @@
             <span class="shop-link-arrow">.<</span><span class="shop-link-text-2"><a href="{% url 'index' %}">Home</a></span>
         </span>
         <span class="float-right">
-            <span class="shop-link-text-2"><a href="{% url 'emailContact' %}">About&Contact </a></span><span class="shop-link-arrow">>.</span>
+            <span class="shop-link-text-2"><a href="{% url 'emailContact' %}">Contact us </a></span><span class="shop-link-arrow">>.</span>
         </span>
     </div>
 {% endblock %}
