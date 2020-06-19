@@ -5,7 +5,7 @@
 {% block page_heading %}
 <div class="container-fluid">
     <div class="row">
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-6 mx-auto">
             <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
                 <ol class="carousel-indicators">
                     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -14,13 +14,13 @@
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active" data-interval="2000">
-                        <img class="p-5 m-5 d-block w-100" src="{{MEDIA_URL}}{{product.image}}" alt="Image of candle" width="100%" />
+                        <img class="mx-auto d-block w-100" src="{{MEDIA_URL}}{{product.image}}" alt="Image of candle" width="100%" />
                     </div>
                     <div class="carousel-item" data-interval="2000">
-                        <img class="p-5 m-5 d-block w-100" src="https://res.cloudinary.com/peggy-co/image/upload/v1591293829/Candles/photo4.min_qxj9xg.jpg" alt="Image of candle" width="100%" />
+                        <img class="mx-auto d-block w-100" src="https://res.cloudinary.com/peggy-co/image/upload/v1591293829/Candles/photo4.min_qxj9xg.jpg" alt="Image of candle" width="100%" />
                     </div>
                     <div class="carousel-item" data-interval="2000">
-                        <img class="p-5 m-5 d-block w-100" src="https://res.cloudinary.com/peggy-co/image/upload/v1591293829/Candles/photo6.min_syim2f.jpg" alt="Image of candle" width="100%" />
+                        <img class="mx-auto d-block w-100" src="https://res.cloudinary.com/peggy-co/image/upload/v1591293829/Candles/photo6.min_syim2f.jpg" alt="Image of candle" width="100%" />
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -98,9 +98,9 @@
         </div>
         {% if reviews %}
             <div class="col-12 col-md-6">
-                <span><h3>Member Reviews</h3></span>
+                <span><h5>Member Reviews</h5></span>
                     {% for review in reviews %}
-                        <div class="card">
+                        <div class="card border m-2">
                             <div class="card-header">
                             {{ review.review_title }}
                             </div>

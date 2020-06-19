@@ -349,6 +349,11 @@ a:focus {
         "statement statement"
         "menu menu"
     }
+    .top-product {
+        grid-template-areas:
+            "logo cart"
+            "product product"
+    }
     .statement {
         align-self: end;
     }
