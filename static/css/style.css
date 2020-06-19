@@ -175,7 +175,6 @@ button:focus {
     color: var(--black-theme);
     text-decoration: none;
 }
-
 /* || Landing Page CSS Grid Specific */
 .wrapper-main {
     display: grid;
@@ -216,9 +215,6 @@ button:focus {
 .product {
     grid-area: product;
 }
-/* || Specific Typography */
-
-
 /* || Home Page specific */
 .candle1 {
     width: 100%;
@@ -295,8 +291,8 @@ a#link:focus {
 
 /* Cart specific css */
 img.snipcart-checkout {
-    width: 60px;
-    padding:20px;
+    width: 50px;
+    padding:10px;
 }
 .cart:hover,
 .cart:focus {
