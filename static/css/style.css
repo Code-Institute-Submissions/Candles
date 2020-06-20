@@ -140,7 +140,7 @@ h5{font-size:var(--step-2)}
 h6{font-size:var(--step-1)}
 
 p, ul, ol, nav {
-    font-size:var(--step--1);
+    font-size:var(--step-0);
 }
 hr {
     height: 2px;
@@ -324,7 +324,7 @@ p:first-child {
 }
 ul {
     list-style: none;
-    font-size: var(--step--1);
+    font-size: var(--step-0);
 }
 ul#menu-list {
     font-size: var(--step-1);

@@ -5,7 +5,7 @@
 {% block title%}0&X. | Login{% endblock %}
 
 {% block page_heading %}
-    <section class="m-4 p-3">
+    <section class="m-1 p-1">
         <h4>Member Login</h4>
         {% if form.errors %}
             <h6>Your username and password didn't match. Please try again.</h6>
@@ -17,7 +17,7 @@
             {% csrf_token %}
             <input type="hidden" name="next" value="{{ next }}" />
             <button type="submit" class="btn btn-warning">Login</button>
-            <a class="btn btn-warning" href="{% url 'index' %}">
+            <a class="btn btn-warning" href="{% url 'memberAreaDisplay' %}">
                 Cancel
             </a>
         </form>

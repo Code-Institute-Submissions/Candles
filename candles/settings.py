@@ -175,5 +175,5 @@ STRIPE_SECRET_KEY = os.getenv("STRIPE_SECRET_KEY")
 SNIPCART_TEST_API_KEY = os.getenv("SNIPCART_TEST_API_KEY")
 #Session will logout automatically after 10 mins of inactivity
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True     
-SESSION_COOKIE_AGE = 600                  
+SESSION_COOKIE_AGE = 300                  
 SESSION_SAVE_EVERY_REQUEST = True  

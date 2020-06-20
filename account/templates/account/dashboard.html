@@ -3,14 +3,14 @@
 {% block title %}0&X. | Profile dashboard{% endblock %}
 
 {% block page_heading %}
-<section class="m-2 p-2">
+<section class="m-1 p-1">
     <h4>Dashboard</h4>
     <h6>Welcome {{request.user.first_name}} to your dashboard.</h6>
     <hr>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12 col-md-6 col-lg-3">
-                <div class="card">
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card border m-1">
                     <div class="card-body">
                     <p class="card-title">Leave a review</p>
                     <p class="card-text">Share your views.</p>
@@ -18,8 +18,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-3">
-                <div class="card">
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card border m-1">
                     <div class="card-body">
                     <p class="card-title">Member-Only Candles</p>
                     <p class="card-text">Bespoke Candle creations.</p>
@@ -27,21 +27,12 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-3">
-                <div class="card">
-                    <div class="card-body">
-                    <p class="card-title">Orders</p>
-                    <p class="card-text">Review your previous orders</p>
-                    <a href="#" class="btn btn-primary">Orders</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-3">
-                <div class="card">
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card border m-1">
                     <div class="card-body">
                     <p class="card-title">Profile Admin</p>
                     <p class="card-text">Review and update your account.</p>
-                    <a href="#" class="btn btn-primary">Update</a>
+                    <a href="{% url 'editProfile' %}" class="btn btn-primary">Update</a>
                     </div>
                 </div>
             </div>
