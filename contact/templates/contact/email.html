@@ -11,10 +11,9 @@
     <form action="{% url 'emailContact' %}" method="POST">
         {% csrf_token %}
         {{ form|crispy }}
-        <button type="submit" class="btn btn-warning">Send</button>
+        <button type="submit" class="btn btn-warning p-2">Send</button>
+        <a class="btn btn-warning p-2" href="{% url 'index' %}">Cancel</a>
     </form>
-    <a href="{% url 'index' %}">
-        <button type="text" class="btn btn-warning pt-2">Cancel</button>
-    </a>
+    
 {% endblock %}
     

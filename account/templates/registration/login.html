@@ -17,6 +17,9 @@
             {% csrf_token %}
             <input type="hidden" name="next" value="{{ next }}" />
             <button type="submit" class="btn btn-warning">Login</button>
+            <a class="btn btn-warning" href="{% url 'index' %}">
+                Cancel
+            </a>
         </form>
         <p><a id="link" href="{% url 'password_reset' %}">Forgotten your password?</a></p>
     </section>
