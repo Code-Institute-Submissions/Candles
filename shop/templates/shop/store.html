@@ -25,7 +25,7 @@
                         <img class="border border-dark rounded" src="{{MEDIA_URL}}{{product.image}}" class="card-img-top" alt="image of candles label">
                         <div class="card-body">
                             <h4 class="card-title">{{product.name}}</h4>
-                            <p class="card-text">{{product.description}}</p>
+                            <p class="card-text">{{product.description|linebreaks}}</p>
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">£{{ product.price }}</h5>

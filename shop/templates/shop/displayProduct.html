@@ -12,7 +12,7 @@
                     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                 </ol>
-                <div class="carousel-inner">
+                <div class="carousel-inner border border-dark rounded">
                     <div class="carousel-item active" data-interval="2000">
                         <img class="mx-auto d-block w-100" src="{{MEDIA_URL}}{{product.image}}" alt="Image of candle" width="100%" />
                     </div>
@@ -37,10 +37,10 @@
             <div class="card">
                 <div class="card-body">
                     <h4 class="card-title">{{product.name}}</h4>
-                    <p class="card-text">{{product.description}}</p>
+                    <p class="card-text">{{product.description|linebreaks}}</p>
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">{{product.top_note_1}}/{{product.top_note_2}}</li>
+                    <li class="list-group-item">{{product.top_note_1}}</li>
                     <li class="list-group-item">{{product.heart_note_1}}</li>
                     <li class="list-group-item">{{product.base_note_1}}</li>
                 </ul>
