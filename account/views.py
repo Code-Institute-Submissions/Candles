@@ -1,5 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render
+from django.core.mail import EmailMessage
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 from .forms import LoginForm, UserRegistrationForm, EditUserForm, EditProfileForm
@@ -51,6 +52,18 @@ def register(request):
             new_user.save()
             Profile.objects.create(user=new_user)
             context = {'new_user':new_user, 'menu_class': 'menu-login'}
+
+            message_name = user_form.cleaned_data['first_name']
+            message_email = user_form.cleaned_data['email']
+            message = EmailMessage(
+                subject="Welcome "+str(message_name)+" to 0&X Candles",
+                to=[str(message_email)],
+                )
+            message.template_id = 2  # use this Sendinblue template
+            message.from_email = None  # to use the template's default sender
+            message.merge_global_data = {'name': message_name,}
+            message.send()
+
             return render(request, 'account/register_done.html', context)
     else:
         user_form = UserRegistrationForm()
