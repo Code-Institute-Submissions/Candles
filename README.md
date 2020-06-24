@@ -10,9 +10,10 @@ The site offers prospective customers everything listed within the requirements 
 - HTML5, CSS3, JS and Python
 - CSS Grid and Bootstrap 4
 - Postrgres 
-- Stripe for payments
-- Integration of Snipcart - a third party 'shopping cart'
-- Integration of SendInBlue - A third-party email/marketing platform
+- Stripe for payments (https://stripe.com/docs/payments/checkout)
+- Integration of Snipcart - A third party 'shopping cart' (https://snipcart.com/)
+- Integration of SendInBlue - A third-party email/marketing platform (https://www.sendinblue.com/)
+- Use of Cloudinary for marketing imagery (https://cloudinary.com/)
 - User authenticated membership section & option reliant on Django User Authentication
 - Deployment on PythonAnywhere(https://peggy535.pythonanywhere.com/) (The domain of the site will be changed subsequently after review and assessment)
 
@@ -30,3 +31,6 @@ The following table provides a breakdown of the apps and details about the speci
 |home|This app is the main landing page for the website which presents the user a brief summary of the business and navigation options|
 |media|This directory is where uploaded views from the sites Django admin panel are uploaded to for the individual products|
 |payment|This app integrates the use of Stripe Checkout and provides the user a 'Quick Buy' option rather than using using a cart|
+|products|This app probvides the site owner the ability to store and update the businesses products|
+|review|If a user decides to join 0&X Candles one of the added benefits is that they can leave member reviews. This app provides that functionality.|
+|shop|This app uses the products and review apps to display a brief overview of the current 4 products available. The user can also read and view a more detailed product page for the 
