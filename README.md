@@ -58,3 +58,5 @@ As previously detailed, both CSS Grid and Bootstrap were employed when coding th
 A specific type font was purchased for this product from called Grotesk. I felt this provided and emanated the correct feel for the product I wish to sell on the site. It's easily readable and accesible and am very happy with the style aspect of it.
 
 I purposefully made some additional images using Adobe Illustrator, these are some of the actual design images that will be used for the live final site and for marketing eventually. I decided to employ the use of Cloudinary for certain images. I've found the service incredible sophisticated and extremely easy to use. Particularly, when looking to resize images it reduces the need to rezie images using Adobe Photoshop. For those images that are present within the project's static file, 'image shrinker' was used to minify the file.
+
+
