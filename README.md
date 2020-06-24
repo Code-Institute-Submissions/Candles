@@ -1,7 +1,6 @@
-#Django Candle e-Commerce site for UK company 0&X.
-#Django project submission for final Full Stack Framework for Diploma in Software-Engineering with Code Institute(CI).
+# Django project submission for final Full Stack Framework for Diploma in Software-Engineering with Code Institute(CI).
 
-#Introduction
+# Introduction & Project Purpose
 
 For my final project I decided to create a live website for an actual business idea that I decided to start. Born from a natural like for candles, I decided to start a candle making business and thought this would be an ideal project idea as it evidently meant e-commerce functionality using the Django Framework. My business is actually called 0&X Candles (Naught and cross) and this project will be used to launch the business and 'go live' after the assessment process has been completed.
 
@@ -11,17 +10,19 @@ The site offers prospective customers everything listed within the requirements 
 - HTML5, CSS3, JS and Python
 - CSS Grid and Bootstrap 4
 - Postrgres 
-- Stripe for payments
-- Integration of Snipcart - a third party 'shopping cart'
-- Integration of SendInBlue - A third-party email/marketing platform
+- Stripe for payments (https://stripe.com/docs/payments/checkout)
+- Integration of Snipcart - A third party 'shopping cart' (https://snipcart.com/)
+- Integration of SendInBlue - A third-party email/marketing platform (https://www.sendinblue.com/)
+- Use of Cloudinary for marketing imagery (https://cloudinary.com/)
 - User authenticated membership section & option reliant on Django User Authentication
 - Deployment on PythonAnywhere(https://peggy535.pythonanywhere.com/) (The domain of the site will be changed subsequently after review and assessment)
 
-##Django 3.0 and the projects reuseable apps.
+## Django 3.0 and the projects reuseable apps.
 
 For this project Django 3.0 was used. I commenced this before the CI change of learning materials and changed to this version of the course/project towards the end of May. Thanks to CI for informing me of this, the new material is brilliant and was most welcomed!
 
-The following table provides a breakdown of the apps and details about the specific and individual apps created
+The following table provides a breakdown of the apps and details about the specific and individual apps created.
+#### Table 1 - A brief overview of the apps created in this Django project. named Candles
 
 |App Name|Details|
 |--------|--------|
