@@ -1,4 +1,3 @@
-# Django Candle e-Commerce site for UK company 0&X Candles
 # Django project submission for final Full Stack Framework for Diploma in Software-Engineering with Code Institute(CI).
 
 # Introduction
@@ -21,10 +20,13 @@ The site offers prospective customers everything listed within the requirements 
 
 For this project Django 3.0 was used. I commenced this before the CI change of learning materials and changed to this version of the course/project towards the end of May. Thanks to CI for informing me of this, the new material is brilliant and was most welcomed!
 
-The following table provides a breakdown of the apps and details about the specific and individual apps created
+The following table provides a breakdown of the apps and details about the specific and individual apps created.
+#### Table 1 - A brief overview of the apps created in this Django project. named Candles
 
 |App Name|Details|
 |--------|--------|
 |account|This app covers the various logic, views and urls needed for the member account creation and user-authentication|
 |contact|This app was created to provide any user the ability to send an emails to the business owner|
-
+|home|This app is the main landing page for the website which presents the user a brief summary of the business and navigation options|
+|media|This directory is where uploaded views from the sites Django admin panel are uploaded to for the individual products|
+|payment|This app integrates the use of Stripe Checkout and provides the user a 'Quick Buy' option rather than using using a cart|
