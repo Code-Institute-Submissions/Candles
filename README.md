@@ -1,8 +1,6 @@
 #Django Candle e-Commerce site for UK company 0&X.
 #Django project submission for final Full Stack Framework for Diploma in Software-Engineering with Code Institute(CI).
 
-[![Build Status](https://travis-ci.com/Peggy535/Candles.svg?branch=master)](https://travis-ci.com/Peggy535/Candles)
-
 #Introduction
 
 For my final project I decided to create a live website for an actual business idea that I decided to start. Born from a natural like for candles, I decided to start a candle making business and thought this would be an ideal project idea as it evidently meant e-commerce functionality using the Django Framework. My business is actually called 0&X Candles (Naught and cross) and this project will be used to launch the business and 'go live' after the assessment process has been completed.
