@@ -47,4 +47,6 @@ To integrate the menu even further, and to make it part of the design, different
 
 Another aspect I wanted to achieve was to offer the user an almost guided route through the website. For example, if the user scrolls all the way to the bottom of the home landing page, it would have been negative ux experience for the user to then have to scroll back up to the fixed space menu that is included in the landing view-port of whatever device it is they are using. As such, a prompting tab is included at the bottom of the home and shop app views that allows the user to easily go forwards or backwards withoiut having to scroll back to the fixed menu for that section of the site.
 
+I would hope the user would agree that the site is relatively easy to use. I have tested this with 3 people and they have all managed to use the features of the site with ease and stated that it was easy to navigate as well as being prompted correctly with meaningful messages that ascertain and inform the user when certain actions have been completed. Reinforcing my desire to make the user feel as though their respective journey within and throughout the site has been thought about.
 
+For example, 
