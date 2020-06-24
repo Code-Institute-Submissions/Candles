@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 @charset "UTF-8";
 
 @font-face {
@@ -154,8 +161,9 @@ img {
 }
 button {
     background: #3F84E5;
+    background: -webkit-gradient(linear, left top, right top, from(#3F84E5), to(#35a7ff));
+    background: -o-linear-gradient(left, #3F84E5 0%, #35a7ff 100%);
     background: linear-gradient(90deg, #3F84E5 0%, #35a7ff 100%);
-    background: -moz-linear-gradient(90deg, #3F84E5 0%, #35a7ff 100%);
     background: -webkit-linear-gradient(90deg, #3F84E5 0%, #35a7ff 100%);
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#3F84E5", endColorstr="#35a7ff", GradientType=1 );
     color:#FFF;
@@ -166,10 +174,13 @@ button {
 }
 button:hover,
 button:focus {
+    -webkit-transition: 0.8s;
+    -o-transition: 0.8s;
     transition: 0.8s;
     background: #ff930f;
+    background: -webkit-gradient(linear, left top, right top, from(#ff930f), to(#fffa5c));
+    background: -o-linear-gradient(left, #ff930f 0%, #fffa5c 100%);
     background: linear-gradient(90deg, #ff930f 0%, #fffa5c 100%);
-    background: -moz-linear-gradient(90deg, #ff930f 0%, #fffa5c 100%);
     background: -webkit-linear-gradient(90deg, #ff930f 0%, #fffa5c 100%);
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FF930F", endColorstr="#FFF95B", GradientType=1 );
     color: var(--black-theme);
@@ -177,48 +188,76 @@ button:focus {
 }
 /* || Landing Page CSS Grid Specific */
 .wrapper-main {
+    display: -ms-grid;
     display: grid;
     grid-gap: 20px;
     height: 100vh;
 }
 .top {
+    display: -ms-grid;
     display: grid;
-    grid-template-areas: 
+        grid-template-areas: 
         "logo blank cart"
         "statement statement menu";
 }
 .top-product {
+    display: -ms-grid;
     display: grid;
-    grid-template-areas:
+        grid-template-areas:
         "logo blank cart"
         "product product product"
 }
 .logo {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
     grid-area: logo;
     min-height: 200px;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+.top-product > .logo {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
 }
 .statement {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
     grid-area: statement;
     min-height: 25vh;
 }
 .menu {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
     grid-area: menu;
     min-height: 25vh;
 }
 .cart {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
     margin: 20px;
     grid-area: cart;
-    align-self: start;
-    justify-self: end;
+    -ms-grid-row-align: start;
+        align-self: start;
+    -ms-grid-column-align: end;
+        justify-self: end;
+}
+.top-product > .cart {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
 }
 .product {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
     grid-area: product;
 }
 /* || Home Page specific */
 .candle1 {
     width: 100%;
-    object-fit: fill;
+    -o-object-fit: fill;
+       object-fit: fill;
     margin: 0;
 }
 .colour-text-block {
@@ -259,6 +298,8 @@ a:hover,
 a:focus,
 a#link:hover,
 a#link:focus {
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
     transition: 0.5s;
     color: var(--yellow-theme);
     text-decoration: none;
@@ -331,6 +372,8 @@ ul#menu-list {
 }
 a:hover,
 a:focus {
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
     transition: 0.5s;
     color: var(--yellow-theme);
     text-decoration: none;
@@ -344,22 +387,55 @@ a:focus {
 /* Media Queries */
 @media (max-width: 700px) {
     .top {
-      grid-template-areas:
+          grid-template-areas:
         "logo cart"
         "statement statement"
         "menu menu"
     }
     .top-product {
-        grid-template-areas:
+            grid-template-areas:
             "logo cart"
             "product product"
     }
     .statement {
-        align-self: end;
+        -ms-flex-item-align: end;
+            -ms-grid-row-align: end;
+            align-self: end;
     }
     img {
         width: 100%;
         max-width: 600px;
+    }
+    .logo {
+        -ms-grid-row: 1;
+        -ms-grid-column: 1
+    }
+    .top-product > .logo {
+        -ms-grid-row: 1;
+        -ms-grid-column: 1
+    }
+    .statement {
+        -ms-grid-row: 2;
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 2
+    }
+    .menu {
+        -ms-grid-row: 3;
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 2
+    }
+    .cart {
+        -ms-grid-row: 1;
+        -ms-grid-column: 2
+    }
+    .top-product > .cart {
+        -ms-grid-row: 1;
+        -ms-grid-column: 2
+    }
+    .product {
+        -ms-grid-row: 2;
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 2
     }
   }
 
