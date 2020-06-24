@@ -15,12 +15,13 @@ def stripeSuccess(request):
 
 def stripeCancel(request):
     context = {'menu_class': 'menu-container'}
-    return render(request, 'payment/cancel.html', context)
+    return render(request, 'payment/canceled.html', context)
 
 def charge(request):
    session = stripe.checkout.Session.create(
-        payment_method_types=['card'],line_items=[{'price': '{{PRICE_ID}}','quantity': 1,}],
+        payment_method_types=['card'],
+        line_items=[{'price': '{{PRICE_ID}}','quantity': 1,}],
         mode='payment',
         success_url='https://peggy535.pythonanywhere.com/payment/success/?session_id={CHECKOUT_SESSION_ID}',
-        cancel_url='https://peggy535.pythonanywhere.com/payment/cancel/',
+        cancel_url='https://peggy535.pythonanywhere.com/payment/canceled/',
     )

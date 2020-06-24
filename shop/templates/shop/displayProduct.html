@@ -77,8 +77,8 @@
                         // a successful payment.
                         // Instead use one of the strategies described in
                         // https://stripe.com/docs/payments/checkout/fulfillment
-                        successUrl: 'http://127.0.1:8000/payment/success/',
-                        cancelUrl: 'http://127.0.1:8000/payment/cancel/',
+                        successUrl: 'https://peggy535.pythonanywhere.com/success',
+                        cancelUrl: 'https://peggy535.pythonanywhere.com/canceled',
                         billingAddressCollection: 'required',
                         shippingAddressCollection: {allowedCountries: ['GB'],}
                         })

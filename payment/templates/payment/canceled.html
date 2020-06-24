@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}0&X. | Payment Quick Buy{% endblock %}
+
+{% block page_heading %}
+<h6>Your transaction has been cancelled and you wont be charged anything.</h6>
+<a href="{% url 'displayShop' %}" class="btn btn-warning">Return to our candles!</a>
+{% endblock %}
