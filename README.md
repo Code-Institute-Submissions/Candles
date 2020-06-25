@@ -43,7 +43,9 @@ The following table provides a breakdown of the apps and details about the speci
 
 ### UX Design/Suitability/Navigation and Defensive Design
 
-Adobe XD was used to design the user-experience aspect of this project. They can be viewed [here](https://xd.adobe.com/view/72e5a7ad-59a4-42fd-9101-ad286d3cffe7-27b6/).
+Adobe XD was used to design the user-experience aspect of this project. The wireframes for desktop and tablet devices can be viewed [here](https://xd.adobe.com/view/72e5a7ad-59a4-42fd-9101-ad286d3cffe7-27b6/), the mobile design can be seen [here](https://xd.adobe.com/view/be4883b7-230c-410b-ba1e-25b0cd5dab32-eb1b/).
+
+You will notice some differences from the initial wireframes I designed to the current site. Throughout the project it became apparent that certain sections weren't neccesary and didn't neccesarily add value to the user's experience.
 
 Having taken inspiration from the likes of Dribble and Behance, I decided to take a slightly un-orthadox apporoach to the design of the site following a principle of 'deconstructing' the normal way of presenting certain aspects of the site. For example, the navigation menu is still available on the landing page of each section of the site yet instead of hiding this from view I've attempted to integrate it into the design and make it an actual feature. Using design research and ideas from a book called, "Making and breaking the Grid" by Timothy Samara, each landing page has 3 distinct points that attempts to draw the user's attention, in effect requesting the user to gaze and follow a shape of a right-angled triangle, allowing virtually half a page of negative space. The theory that less is more is also applied here.
 
