@@ -89,6 +89,8 @@ The ```review app``` provides registered members the ability to leave product re
 
 The ```contact app``` provides any user the ability to send a message to 0&X. A simple form is created and allows the user to enter their name, email and message. A confirmation display is presented upon successfully sending the message. This employs the use of sendinblue and anymail in the Django project. Once an email is sent, an automated email template is sent to the users email to confirm that their message has been sent and to confirm that someone will be in touch with them. The actual message, is then sent to the 0&X email account with the appropriate information.
 
-The ```account app``` was inspired from Django's User Authentication as well as the immensely helpful book "Django 3 By Example" by Antonio Mele. I found this aspect of the project very challenging and made use of the example given in this book for user creation and authentication. I made my own modifications to the code that provided the functionality that I was aiming for as some of those provided did not seem neccesary.
+The ```account app``` was inspired from Django's User Authentication as well as the immensely helpful book, "Django 3 By Example" by Antonio Mele. I found this aspect of the project very challenging and made use of the example given in this book for user creation and authentication. I made my own modifications to the code that provided the functionality that I was aiming for as some of those provided did not seem neccesary.
 
-The app provides the functionality needed to authenticate as well as register and update respective parts of their own profile.
+The app provides the functionality needed to authenticate as well as register and update respective parts of their own profile. The individual has their own respective dashboard from which they can update their profile, write a review and have access to 'Member Only' candles. 
+
+
