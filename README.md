@@ -111,7 +111,9 @@ Throughout the project I have structured the directories and used file names as 
 
 I was able to use in part ```unittest's``` and ```coverage``` for most of the apps logic. I decided to user test the user account creation and authentication myself and went through the checklist below. I also requested two family members (Non-Developers) to go through and test all the possible scenarios and features on the site. This provded very fruitful receiving 3 sets of positive live-trials.
 
-The following was a produced checklist I used and two family-members for live user testing:
+The unitests for the ```home, shop, products, review and contact``` apps tested the apps specific models, forms and views where applicable.
+
+The following was a checklist I used and two family-members for live user testing:
 
 #### User tests for live site - 'Candles' by Wayne Pegg
 
@@ -149,5 +151,16 @@ The following was a produced checklist I used and two family-members for live us
 - The user cannot update their profile with missing required information
 - Once the user has updated and submitted their profile information this saves correctly and a message confirming this is displayed to the user
 
+### Data store integration
+
+Throughout the development phase of the project I initially used the associated default sqlite3 database supplied. When I was ready to deploy this I removed the previous associated data and then migrated this to PostgreSQL. Initially, I performed a migration with the original data stored and came accross some errors. After researching this topic on 'Stack Overflow' I realised the best option was to remove this data and then migrate. This actually worked out well as I had re-written and re-designed some of the products images and descriptions. Initially I used PG Admin 4 to checked the successful migration and correct schema was in place as it should be. Once this was in place still using a localhost server I then progressed onto the deployment phase for the project.
+
+### Deployment - PythonAnywhere
+
+Having previously used PythonAnywhere for my third project, I was that immpressed with the ease and reliability of it that I decided to use it again. One of the added benefits for this is that there is an option to integrate and have the platform also host a PostgreSQL server for the Django project. 
+
+The process for deployment is well documented and was relatively easy. I was able to clone my Git repository, create a virtual environment with all the required dependencies and then integrate the PostgreSQL database having configured the projects settings file and the wsgi configuration file on PythonAnywhere.
+
+I then re-configured the ```.env``` file for the api keys used to ensure dotenv was able to load them when needed. Finally, I configured the paths for the projects static and media folders. Once this was done the project was ready to go live at the following address (https://peggy535.pythonanywhere.com/).
 
 
