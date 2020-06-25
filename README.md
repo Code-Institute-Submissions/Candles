@@ -115,7 +115,14 @@ The following was a produced checklist I used and two family-members for live us
 
 ##### User tests for live site - 'Candles' by Wayne Pegg
 
+-[x] User with account can login 
+-[x] Correct forms errors displayed if either Username and/or password not included
+-[x] User is not logged in if invalid login information is given, errors provided to user
+-[x] User with account who is logged in can logout and receives a message to confirm this
+-[x] After 5mins of user inactivity user is logged out
 
+
+-[x] New user can register
 
 
 
