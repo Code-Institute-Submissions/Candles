@@ -113,16 +113,41 @@ I was able to use in part ```unittest's``` and ```coverage``` for most of the ap
 
 The following was a produced checklist I used and two family-members for live user testing:
 
-##### User tests for live site - 'Candles' by Wayne Pegg
+#### User tests for live site - 'Candles' by Wayne Pegg
 
--[x] User with account can login 
--[x] Correct forms errors displayed if either Username and/or password not included
--[x] User is not logged in if invalid login information is given, errors provided to user
--[x] User with account who is logged in can logout and receives a message to confirm this
--[x] After 5mins of user inactivity user is logged out
+###### Login/Logout
+- User with account can login 
+- Correct forms errors displayed if either Username and/or password not included
+- User is not logged in if invalid login information is given, errors provided to user
+- User with account who is logged in can logout and receives a message to confirm this
+- After 5 mins of user inactivity user is logged out
 
+###### User Registration
+- A new user can register with required user information given
+- Correct errors are highlight when required information is invalid and/or missing for all required fields 
+- A new user cannot register if invalid information is given or required information not provided
+- Once a new user has registered and their account has successfully created they are presented a view that confirms this with their detailed First name.
+- The new user can login and the login/logout tests still apply
+-Once a new user has been registered with valid information, a template email is sent to their registered email address. This template being sent from SendInBlue with business branding and the correct welcoming message.
 
--[x] New user can register
+###### Forgotten password
+
+- A registered user can access the forgotten password functionality on the member Login page
+- Correct error message displayed to user if invalid email format provided
+- With correct email entry ensure email is received in specific email inbox
+- User receives notification that if their email exists, an email will be sent to them from which they can reset their email
+- User is able to click on link that has been emailed to users email account which directs the user to the websites reset password page
+- User is able to provide two identical passwords and reset their password to this
+- If user does not provide valid passwords or inputs invalid data, the correct error messages are displayed to the user.
+- Once the user has reset their password, they receive a confirmatory message detailing this and the user then must login with the new password.
+- Ensure that the correct error messages are displayed if the user enters an incorrect password
+
+###### Profile 
+
+- The 'Edit my profile' menu tab or the Profile Admin 'Update' button directs the user to their account profile page
+- The user is promoted with the correct form errors if required information is missing and/or invalid
+- The user cannot update their profile with missing required information
+- Once the user has updated and submitted their profile information this saves correctly and a message confirming this is displayed to the user
 
 
 
