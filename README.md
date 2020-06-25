@@ -17,6 +17,10 @@ The site offers prospective customers everything listed within the requirements 
 - User authenticated membership section & option reliant on Django User Authentication
 - Deployment on PythonAnywhere(https://peggy535.pythonanywhere.com/) (The domain of the site will be changed subsequently after review and assessment)
 
+A brief personal note: I spoke with Neil McEwan in March 2020. I believe I was meant to complete my course by the end of April 2020. As I explained to Neil, I have been suffering from the effects of several mental health illnesses since the end of last year and was kindly granted an extension to access and complete my course up until August 2020. Although I'm not asking for any special treatment and hope my project is marked and assessed in line with everyone else's I have found it challenging over the past few months to complete this project as my mental health has been significantly poor during this time.
+
+I would also like to thank both Neil McEwan and Code Institute for their support and understanding during what has been a very turbulent and challenging period of life.
+
 ## Django 3.0 and the projects reuseable apps.
 
 For this project Django 3.0 was used. I commenced this before the CI change of learning materials and changed to this version of the course/project towards the end of May. Thanks to CI for informing me of this, the new material is brilliant and was most welcomed!
@@ -81,10 +85,10 @@ Whilst researching this project I came across much research from the likes of Sn
 
 For this 'Quick Buy' functionality, I decided to use Stripe Checkout. This seemed the most obvious choice for this type of product. It also allowed me to ensure requirement 6 (6. Use of Stripe: At least one of your Django apps should contain some e-commerce functionality using Stripe.). This allowed a lightweight footprint of code on the project and at the same time, allowed me to use what is an incredibly powerful and functional api that is perfect for the type of products being sold. As requested, the test api keys are currently being used. 
 
-As requested, when the payment is successful, the user is directed to a confirmation page where they receive a 10% discount code for their next purchase. This is only accesible for those purchase via either Stripe or via the Shopping Cart.
-
 The ```review app``` provides registered members the ability to leave product reviews. As will be described later, this is one of the 'good' reasons for joining. This app is only accesible for logged-in members and is accessed through the user's dashboard. Once clicked, the user can choose the product and then leave a review. Once saved through the models.py file, this is then displayed on the individual product page after the products description.
 
 The ```contact app``` provides any user the ability to send a message to 0&X. A simple form is created and allows the user to enter their name, email and message. A confirmation display is presented upon successfully sending the message. This employs the use of sendinblue and anymail in the Django project. Once an email is sent, an automated email template is sent to the users email to confirm that their message has been sent and to confirm that someone will be in touch with them. The actual message, is then sent to the 0&X email account with the appropriate information.
 
-The ```account app```
+The ```account app``` was inspired from Django's User Authentication as well as the immensely helpful book "Django 3 By Example" by Antonio Mele. I found this aspect of the project very challenging and made use of the example given in this book for user creation and authentication. I made my own modifications to the code that provided the functionality that I was aiming for as some of those provided did not seem neccesary.
+
+The app provides the functionality needed to authenticate as well as register and update respective parts of their own profile.
