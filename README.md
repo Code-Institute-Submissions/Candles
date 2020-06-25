@@ -39,7 +39,7 @@ The following table provides a breakdown of the apps and details about the speci
 
 ### UX Design/Suitability/Navigation and Defensive Design
 
-Adobe XD was used to design the user-experience aspect of this project. They can be viewed here: (https://xd.adobe.com/view/72e5a7ad-59a4-42fd-9101-ad286d3cffe7-27b6/).
+Adobe XD was used to design the user-experience aspect of this project. They can be viewed [here](https://xd.adobe.com/view/72e5a7ad-59a4-42fd-9101-ad286d3cffe7-27b6/).
 
 Having taken inspiration from the likes of Dribble and Behance, I decided to take a slightly un-orthadox apporoach to the design of the site following a principle of 'deconstructing' the normal way of presenting certain aspects of the site. For example, the navigation menu is still available on the landing page of each section of the site yet instead of hiding this from view I've attempted to integrate it into the design and make it an actual feature. Using design research and ideas from a book called, "Making and breaking the Grid" by Timothy Samara, each landing page has 3 distinct points that attempts to draw the user's attention, in effect requesting the user to gaze and follow a shape of a right-angled triangle, allowing virtually half a page of negative space. The theory that less is more is also applied here.
 
@@ -53,8 +53,12 @@ For example, when an email has been sent a confirmation page with a short messag
 
 # Layout and Visual Impact
 
-As previously detailed, both CSS Grid and Bootstrap were employed when coding the site. Due to the design of the landing page, CSS Grid felt a natural choice. This has been made to be responsive for all device types as well as using the added benefits that Bootstrap provides.
+As previously detailed, both CSS Grid and Bootstrap were employed when coding the site. Due to the design of the landing page, CSS Grid felt a natural choice. This has been made to be responsive for all device types as well as using the added benefits that Bootstrap provides. Further, the site has been tested within Google Chrome and Firefox Developer Edition on various device screens for responsive design ensuring the correct design and layout features are presented.
 
-A specific type font was purchased for this product from called Grotesk. I felt this provided and emanated the correct feel for the product I wish to sell on the site. It's easily readable and accesible and am very happy with the style aspect of it.
+A specific type font was purchased for this product from called Grotesk from a typefont foundry. I felt this provided and emanated the correct feel for the product I wish to sell on the site. It's easily readable and accesible and am very happy with the style aspect of it. This is hosted within the projects static folder using ```.woff``` and ```.woff2``` file formats.
 
-I purposefully made some additional images using Adobe Illustrator, these are some of the actual design images that will be used for the live final site and for marketing eventually. I decided to employ the use of Cloudinary for certain images. I've found the service incredible sophisticated and extremely easy to use. Particularly, when looking to resize images it reduces the need to rezie images using Adobe Photoshop. For those images that are present within the project's static file, 'image shrinker' was used to minify the file.
+I purposefully made some additional images using Adobe Illustrator, these are some of the actual design images that will be used for the live final site and for marketing eventually. I decided to employ the use of Cloudinary for certain images. I've found the service incredible sophisticated and extremely easy to use. Particularly, when looking to resize images it reduces the need to use Adobe Photoshop. For those images that are present within the project's static file, 'image shrinker' was used to minify the file. Photographic images were sourced from www.unsplash.com.
+
+# Code verification
+
+Having completed the project and deployed it using [PythonAnywhere](www.pythonanywhere.com)

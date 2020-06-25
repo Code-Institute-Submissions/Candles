@@ -159,7 +159,7 @@ li a {
 img {
     width: 80%;
 }
-button {
+button, #discover-btn {
     background: #3F84E5;
     background: -webkit-gradient(linear, left top, right top, from(#3F84E5), to(#35a7ff));
     background: -o-linear-gradient(left, #3F84E5 0%, #35a7ff 100%);
@@ -173,6 +173,7 @@ button {
     font-size: var(--step--1)
 }
 button:hover,
+#discover-btn:hover,
 button:focus {
     -webkit-transition: 0.8s;
     -o-transition: 0.8s;
