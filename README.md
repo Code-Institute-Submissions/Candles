@@ -61,4 +61,18 @@ I purposefully made some additional images using Adobe Illustrator, these are so
 
 # Code verification
 
-Having completed the project and deployed it using [PythonAnywhere](www.pythonanywhere.com)
+Having completed the project and deployed it using [PythonAnywhere](www.pythonanywhere.com) I ran the sites code through the [W3 Markup Validation Service](https://validator.w3.org/) and unsured the css code was checked through [PurifyCSS](https://purifycss.online/) for any unused css code and [Autoprefixer CSS online](http://autoprefixer.github.io/) to add vendor prefixes to the code.
+
+Throughout the project I used the most relevant and up to date documentation for the third-party services I employed as well as that documentation for Django 3.0, Bootstrap 4.4.
+
+# Application Features
+
+As detailed earlier in table 1, I created several app's in this project. Each of them having a specific and focused design.
+
+```home app``` - This has primarily one focus, to present a landing page to the user, navigation and display information about the Candle business and it's products.
+
+```shop, payment, review & products app's``` - The ```shop app``` uses the ```payment, review and products app's``` to populate specific areas of the different ```shop``` views.
+
+The products app was created to seperate the concerns of the specific details of each product from the shop app which ultimately is designed to present and display those products of the e-commerce website to users. The ```products app``` is registered with the admin section of the Django project and provides the superuser with the ability to create a product and update specific feild entries for each candle from the model that is created for each product. Images for the individual product are uploaded to the ```/media/``` folder of the Candles project.
+
+The shop app has a general overview of each candle, highlighting 40 words of the candle description. The user is able to click on a button titled, "Discover more" which allows the user to then progress to a specific page devoted to the individual candle and read the full description. It also provides the user a carousel of images for marketing purposes and the option to either add the item to the shopping cart of the project powered by snipcart, or offers the user the ability to 'Quick Buy' the product. Whilst researching this project I came across much research from the likes of Snipcart and Stripe indicating the growing importance of a fast, user-friendly, reliable checkout process where the user doesn't have to neccesarily 'become a member' or 'subscribe' to a companies marketing platform so that they may be able to purchase an item. Indeed, this actually holds true for myself in my own experience as a consumer.  
