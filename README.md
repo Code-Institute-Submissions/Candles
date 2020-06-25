@@ -166,3 +166,4 @@ The process for deployment is well documented and was relatively easy. I was abl
 I then re-configured the ```.env``` file for the api keys used to ensure dotenv was able to load them when needed. Finally, I configured the paths for the projects static and media folders. Once this was done the project was ready to go live at the following address (https://peggy535.pythonanywhere.com/).
 
 
+
