@@ -91,6 +91,31 @@ The ```contact app``` provides any user the ability to send a message to 0&X. A 
 
 The ```account app``` was inspired from Django's User Authentication as well as the immensely helpful book, "Django 3 By Example" by Antonio Mele. I found this aspect of the project very challenging and made use of the example given in this book for user creation and authentication. I made my own modifications to the code that provided the functionality that I was aiming for as some of those provided did not seem neccesary.
 
-The app provides the functionality needed to authenticate as well as register and update respective parts of their own profile. The individual has their own respective dashboard from which they can update their profile, write a review and have access to 'Member Only' candles. 
+The app provides the functionality needed to authenticate as well as register and update respective parts of their own profile. The individual has their own dashboard from which they can update their profile, write a review and have access to 'Member Only' candles. 
+
+The following apps have all been used in cross-app logic with this project:
+
+```shop/products/payment/review```
+```account/review/products```
+```review/products```
+
+The site was developed to be an e-commerce website. Although the user has the ability to 'Quick Buy' a candle, they also have the option to use a shopping cart. I felt it best to use Snipcart for this. It's a brilliant service, lightweight and incredibly resilient and reliable.
+
+The project as a whole relies on the the in-built security of Django 3.0. ```csrf-tokens``` have been used where required and design consideration's from django considered throughout.
+
+# Software Development
+
+Throughout the project I have structured the directories and used file names as per Django's recommendations. With this I used a Git repository to host the code and updated this accordingly when significant changes were made with commit messages that were meaningful and useful to me as the projects developer but also to others who may not have worked on the project.
+
+### Testing 
+
+I was able to use in part ```unittest's``` and ```coverage``` for most of the apps logic. I decided to user test the user account creation and authentication myself and went through the checklist below. I also requested two family members (Non-Developers) to go through and test all the possible scenarios and features on the site. This provded very fruitful receiving 3 sets of positive live-trials.
+
+The following was a produced checklist I used and two family-members for live user testing:
+
+##### User tests for live site - 'Candles' by Wayne Pegg
+
+
+
 
 
