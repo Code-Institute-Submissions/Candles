@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'contact/base.html' %}
 
 {% load crispy_forms_tags %}
 
@@ -14,6 +14,5 @@
         <button type="submit" class="btn btn-warning p-2">Send</button>
         <a class="btn btn-warning p-2" href="{% url 'index' %}">Cancel</a>
     </form>
-    
 {% endblock %}
     
