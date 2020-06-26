@@ -22,44 +22,43 @@
 </head>
 <body>
     <main class="wrapper-main">
-        <div class="top">
-            <div class="logo">
-                <img class="p-1" src="{% static 'images/newlogo.min.jpg' %}" alt="Company logo of 0&X."/>
-            </div>
-            <div class="cart">
-                <img class="snipcart-checkout p-3" src="{% static 'images/cart.svg' %}" alt="Company logo of 0&X."/><br>
-                <span class="snipcart-items-count p-3"></span><br>
-                <span class="snipcart-total-price p-3"></span>
-            </div>
-            <div class="statement p-3">
-                {% block page_heading %}
+    
+        <div class="logo">
+            <img class="p-1" src="{% static 'images/newlogo.min.jpg' %}" alt="Company logo of 0&X."/>
+        </div>
+        <div class="cart">
+            <img class="snipcart-checkout p-3" src="{% static 'images/cart.svg' %}" alt="Company logo of 0&X."/><br>
+            <span class="snipcart-items-count p-3"></span><br>
+            <span class="snipcart-total-price p-3"></span>
+        </div>
+        <div class="statement p-3">
+            {% block page_heading %}
 
-                {% endblock %}
-            </div>
-            <div class="{{ menu_class }} menu">
-                <ul id="menu-list" class="py-3 pl-3 pr-5 mr-5">
-                    <li><a href={% url 'index' %}>Home</a></li>
-                    <li><a href={% url 'displayShop' %}>Shop</a></li>
-                    {% if not request.user.is_authenticated %}
-                        <li><a href={% url 'register' %}>Member Registration</a></li>
-                        <li><a href={% url 'login' %}>Member Login</a></li>
-                    {% endif %}
-                    {% if request.user.is_authenticated %}
-                        <li>
-                            <a href="{% url 'dashboard' %}">My dashboard</a>
-                        </li>
-                        <li>
-                            <a href="{% url 'editProfile' %}">Edit my profile</a>
-                        </li>
-                        <li>
-                            <a href={% url 'logout' %}>Logout</a>
-                        </li>
-                    {% endif %}
-                </ul>
-            </div>
+            {% endblock %}
+        </div>
+        <div class="{{ menu_class }} menu">
+            <ul id="menu-list" class="py-3 pl-3 pr-5 mr-5">
+                <li><a href={% url 'index' %}>Home</a></li>
+                <li><a href={% url 'displayShop' %}>Shop</a></li>
+                {% if not request.user.is_authenticated %}
+                    <li><a href={% url 'register' %}>Member Registration</a></li>
+                    <li><a href={% url 'login' %}>Member Login</a></li>
+                {% endif %}
+                {% if request.user.is_authenticated %}
+                    <li>
+                        <a href="{% url 'dashboard' %}">My dashboard</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'editProfile' %}">Edit my profile</a>
+                    </li>
+                    <li>
+                        <a href={% url 'logout' %}>Logout</a>
+                    </li>
+                {% endif %}
+            </ul>
         </div>
     </main>
-    <div hidden id="snipcart" data-api-key="NGUzZDFmNjQtMmE1YS00NGFkLWExOGMtZTA2YjAwM2FkOGI2NjM3MjMyNjIzMTI1NDM2ODky"></div>
+    <div hidden id="snipcart" data-api-key="NGUzZDFmNjQtMmE1YS00NGFkLWExOGMtZTA2YjAwM2FkOGI2NjM3MjMyNjIzMTI1NDM2ODky">{% csrf_token %}</div>
     <script src="https://cdn.snipcart.com/themes/v3.0.14/default/snipcart.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
