@@ -25,18 +25,17 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.getenv("SECRET_KEY")
 
-
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['peggy535.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1:8000', '127.0.0.1', 'localhost', 'testserver']
 
 
 # Application definitions:
 """
 account.apps.AccountConfig has been placed at the top in order
 for Django to use the prescribed templates in account/templates/registration
-by default.
+by default. 
 """
 
 INSTALLED_APPS = [
@@ -93,15 +92,23 @@ WSGI_APPLICATION = 'candles.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
-
+"""
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'candledb',
-        'USER': 'waynepegg',
-        'PASSWORD': 'Jasper1974!',
-        'HOST': 'Peggy535-1693.postgres.pythonanywhere-services.com',
-        'PORT': '11693',
+        'NAME': 'candles',
+        'USER': 'postgres',
+        'PASSWORD': 'Gizmo1974!',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}
+
+"""
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
@@ -142,10 +149,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+    '/var/www/static/',
+]
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 LOGIN_REDIRECT_URL = 'dashboard'
 LOGIN_URL = 'login'
@@ -165,6 +175,6 @@ STRIPE_SECRET_KEY = os.getenv("STRIPE_SECRET_KEY")
 
 SNIPCART_TEST_API_KEY = os.getenv("SNIPCART_TEST_API_KEY")
 #Session will logout automatically after 10 mins of inactivity
-SESSION_EXPIRE_AT_BROWSER_CLOSE = True
-SESSION_COOKIE_AGE = 300
-SESSION_SAVE_EVERY_REQUEST = True
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True     
+SESSION_COOKIE_AGE = 300                  
+SESSION_SAVE_EVERY_REQUEST = True  
