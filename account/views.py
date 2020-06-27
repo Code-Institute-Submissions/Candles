@@ -67,7 +67,7 @@ def register(request):
             return render(request, 'account/register_done.html', context)
     else:
         user_form = UserRegistrationForm()
-        context = {'user_form':user_form, 'menu_class': 'menu-login'}
+        context = {'user_form':user_form}
     return render(request, 'account/register.html', context)
 
 @login_required
@@ -79,13 +79,13 @@ def editProfile(request):
         if user_form.is_valid() and profile_form.is_valid():
             user_form.save()
             profile_form.save()
-            context = {'menu_class': 'menu-login'}
+            context = {}
         return render(request, 'account/profileUpdated.html', context)
     else:
         user_form = EditUserForm(instance=request.user)
         profile_form = EditProfileForm(instance=request.user.profile)
 
-    context = {'user_form':user_form, 'profile_form': profile_form, 'menu_class': 'menu-login'}
+    context = {'user_form':user_form, 'profile_form': profile_form}
     return render(request, 'account/editProfile.html', context)
 
 

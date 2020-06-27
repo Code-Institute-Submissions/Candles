@@ -145,7 +145,7 @@ li a {
     color: var(--main-theme-colour) !important;
 }
 img {
-    width: 60%;
+    width: 100%;
 }
 button, #discover-btn {
     background: #3F84E5;
@@ -188,10 +188,14 @@ button:focus {
 .logo {
     grid-area: 1 / 1 / 3 / 3;
 }
-.statement {
+.email {
     grid-area: 3 / 1 / 6 / 4;
 }
+.statement {
+    grid-area: 4 / 1 / 6 / 4;
+}
 .menu {
+    margin-top: 1em;
     grid-area: 4 / 4 / 6 / 6;
 }
 .cart {
@@ -320,6 +324,10 @@ a:focus {
         grid-area: 1 / 1 / 2 / 2;
     }
     .statement {
+        grid-area: 2 / 1 / 4 / 3;
+        align-self: end;
+    }
+    .email {
         grid-area: 2 / 1 / 4 / 3;
     }
     .menu {

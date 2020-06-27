@@ -13,9 +13,9 @@ def writeReview(request):
             new_review.date = timezone.now() 
             new_review.save()
 
-            context = {'form': new_review, 'menu_class': 'menu-login'}
+            context = {'form': new_review}
             return render(request, 'review/review_submitted.html', context)
     else:
         review_form = ReviewForm()
-    context = {'form': review_form, 'menu_class': 'menu-login'}
+    context = {'form': review_form}
     return render(request, 'review/displayWriteReview.html', context)

@@ -44,5 +44,5 @@ def emailContact(request):
         return render(request, 'contact/email.html', context)
 
 def emailSentConfirm(request):
-    context = {'menu_class': 'menu-login'}
+    context = {}
     return render(request, 'contact/emailSent.html', context)
