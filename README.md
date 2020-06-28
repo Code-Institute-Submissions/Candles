@@ -17,10 +17,6 @@ The site offers prospective customers everything listed within the requirements 
 - User authenticated membership section & option reliant on Django User Authentication
 - Deployment on PythonAnywhere(https://peggy535.pythonanywhere.com/) (The domain of the site will be changed subsequently after review and assessment)
 
-A brief personal note: I spoke with Neil McEwan in March 2020. I believe I was meant to complete my course by the end of April 2020. As I explained to Neil, I have been suffering from the effects of several mental health illnesses since the end of last year and was kindly granted an extension to access and complete my course up until August 2020. Although I'm not asking for any special treatment and hope my project is marked and assessed in line with everyone else's I have found it challenging over the past few months to complete this project as my mental health has been significantly poor during this time.
-
-I would also like to thank both Neil McEwan and Code Institute for their support and understanding during what has been a very turbulent and challenging period of life.
-
 ## Django 3.0 and the projects reuseable apps.
 
 For this project Django 3.0 was used. I commenced this before the CI change of learning materials and changed to this version of the course/project towards the end of May. Thanks to CI for informing me of this, the new material is brilliant and was most welcomed!
@@ -171,4 +167,20 @@ I then re-configured the ```.env``` file for the api keys used to ensure dotenv 
 
 Also, as is neccsary for production deployment the DEBUG setting in ```candles/settings.py``` was set to FALSE.
 
+### Acknowldgements
 
+For this project I used the following study materials for the following aspects of my code base:
+
+1. Django 3 by Example by Antonio Mele (Primarily used for everything as it's such a helpful resources but in particular User registration/authentication and Member Reviews)
+2. Real Python Tutorials for various aspects of all apps
+3. Django 3 documentation
+4. Stack Overflow
+5. Code Institutes Django 3 course
+6. Stripe developer tutorials
+7. Snipcart developer tutorials
+
+Individual acknowledgements:
+
+i) I would like to highly praise and sincerely thanks my mentor, Spencer Barriball. He has shown me outstanding support and truly is a brilliant at what he does. Spencer is so very supportive, understanding, authentic and amazingly motivational. I really would not have been able to complete this great course without him. His skills and knowledge are simply evident as is his enthusiasm for what he does. Many thanks Spencer.
+
+ii) I would also like to thank Neil McEwan for the support he has shown me in the laster part of this course as well as the support team at Code Institute. Their understanding and general support throughout the course really does make a difference and hope these words provide meaning to all your efforts. Many thanks.

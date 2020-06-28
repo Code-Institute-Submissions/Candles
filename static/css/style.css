@@ -446,6 +446,8 @@ a:focus {
         grid-template-rows: repeat(5, 1fr);
     }
     .wrapper-main-dashboard {
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
         height: fit-content;
     }
     .wrapper-main, .wrapper-main-dashboard > *:nth-child(1) {
