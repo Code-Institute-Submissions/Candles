@@ -445,6 +445,9 @@ a:focus {
         -ms-grid-rows: (1fr)[5];
         grid-template-rows: repeat(5, 1fr);
     }
+    .wrapper-main-dashboard {
+        height: fit-content;
+    }
     .wrapper-main, .wrapper-main-dashboard > *:nth-child(1) {
         -ms-grid-row: 1;
         -ms-grid-column: 1;
@@ -526,7 +529,6 @@ a:focus {
         -ms-grid-column-span: 1;
         grid-area: 1 / 2 / 2 / 3; 
     }
-    
     .member-font {
         font-size: var(--step--0);
     }

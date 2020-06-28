@@ -89,7 +89,9 @@ For this 'Quick Buy' functionality, I decided to use Stripe Checkout. This seeme
 
 The ```review app``` provides registered members the ability to leave product reviews. As will be described later, this is one of the 'good' reasons for joining. This app is only accesible for logged-in members and is accessed through the user's dashboard. Once clicked, the user can choose the product and then leave a review. Once saved through the models.py file, this is then displayed on the individual product page after the products description.
 
-The ```contact app``` provides any user the ability to send a message to 0&X. A simple form is created and allows the user to enter their name, email and message. A confirmation display is presented upon successfully sending the message. This employs the use of sendinblue and anymail in the Django project. Once an email is sent, an automated email template is sent to the users email to confirm that their message has been sent and to confirm that someone will be in touch with them. The actual message, is then sent to the 0&X email account with the appropriate information.
+The ```contact app``` provides any user the ability to send a message to 0&X. A simple form is created and allows the user to enter their name, email and message. A confirmation display is presented upon successfully sending the message. This employs the use of sendinblue and anymail in the Django project and is 'live'. Once an email is sent, an automated email template is sent to the users email to confirm that their message has been sent and to confirm that someone will be in touch with them. The actual message, is then sent to the 0&X email account with the appropriate information.
+
+When a user registers for the first time, a welcoming template is also sent highlighting a specific product and links to it.
 
 The ```account app``` was inspired from Django's User Authentication as well as the immensely helpful book, "Django 3 By Example" by Antonio Mele. I found this aspect of the project very challenging and made use of the example given in this book for user creation and authentication. I made my own modifications to the code that provided the functionality that I was aiming for as some of those provided did not seem neccesary.
 
@@ -112,6 +114,8 @@ Throughout the project I have structured the directories and used file names as 
 ### Testing 
 
 I was able to use in part ```unittest's``` and ```coverage``` for most of the apps logic. I decided to user test the user account creation and authentication myself and went through the checklist below. I also requested two family members (Non-Developers) to go through and test all the possible scenarios and features on the site. This provded very fruitful receiving 3 sets of positive live-trials.
+
+I found testing very challenging but also very rewarding as it heavily challenged my understanding of the framework. On the positive side, this has shown me the overall importance of testing but more importantly how 'forensic' ones attitude and understanding should be to ensure effective and efficient development. I had to revert back to the Django documentation and refresh my understanding and knowledge about Request objects and models & forms for example. 
 
 The unitests for the ```home, shop, products, review and contact``` apps tested the apps specific models, forms and views where applicable.
 
@@ -165,5 +169,6 @@ The process for deployment is well documented and was relatively easy. I was abl
 
 I then re-configured the ```.env``` file for the api keys used to ensure dotenv was able to load them when needed. Finally, I configured the paths for the projects static and media folders. Once this was done the project was ready to go live at the following address (https://peggy535.pythonanywhere.com/).
 
+Also, as is neccsary for production deployment the DEBUG setting in ```candles/settings.py``` was set to FALSE.
 
 

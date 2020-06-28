@@ -1,0 +1,70 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="preconnect" href="https://app.snipcart.com">
+    <link rel="preconnect" href="https://cdn.snipcart.com">
+    <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.0.14/default/snipcart.css" />
+    <script src="https://js.stripe.com/v3"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon_package/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon_package/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon_package/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'favicon_package/site.webmanifest' %}">
+    <link rel="mask-icon" href="{% static 'favicon_package/safari-pinned-tab.svg' %}" color="#103afc">
+    <meta name="msapplication-TileColor" content="#ffc40d">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+                <div class="col-4">
+                    <img class="logo-dashboard" src="{% static 'images/newlogo.min.jpg' %}" alt="Company logo of 0&X." style="width:30vw"/>
+                </div>
+                <div class="col-2 offset-6 mr-0 pr-0">
+                    <img class="snipcart-checkout float-right" src="{% static 'images/cart.svg' %}" alt="Company logo of 0&X."/><br>
+                </div>
+            </div>        
+        
+    </div>
+
+    <main class="wrapper-main-dashboard">
+        <div class="email p-3">
+            {% block page_heading %}
+
+            {% endblock %}
+        </div>
+    </main>
+    <div class="{{ menu_class }} menu">
+        <ul id="menu-list" class="py-3 pl-3 pr-5 mr-5">
+            <li><a href={% url 'index' %}>Home</a></li>
+            <li><a href={% url 'displayShop' %}>Shop</a></li>
+            {% if not request.user.is_authenticated %}
+                <li><a href={% url 'register' %}>Member Registration</a></li>
+                <li><a href={% url 'login' %}>Member Login</a></li>
+            {% endif %}
+            {% if request.user.is_authenticated %}
+                <li>
+                    <a href="{% url 'dashboard' %}">My dashboard</a>
+                </li>
+                <li>
+                    <a href="{% url 'editProfile' %}">Edit my profile</a>
+                </li>
+                <li>
+                    <a href={% url 'logout' %}>Logout</a>
+                </li>
+            {% endif %}
+        </ul>
+    </div>
+    <div hidden id="snipcart" data-api-key="NGUzZDFmNjQtMmE1YS00NGFkLWExOGMtZTA2YjAwM2FkOGI2NjM3MjMyNjIzMTI1NDM2ODky">{% csrf_token %}</div>
+    <script src="https://cdn.snipcart.com/themes/v3.0.14/default/snipcart.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>
